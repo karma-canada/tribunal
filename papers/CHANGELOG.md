@@ -2,6 +2,19 @@
 
 Changes to the canonical Tribunal position paper across versions.
 
+## v0.3 — 2026-04-29
+
+**§7 reframed; methodology-critique addendum (§7.7) added.** Substantive editorial changes:
+
+- New **§7.0 "Two findings worth caring about"** leads with the *canonization effect* (tight cross-model consensus = scholarship-settled detection) and the *cross-jurisdictional structured-output reliability differential*. These reframe what the bias comparator is primarily measuring.
+- The canonization-effect framing reorients the project's central claim: the methodology does not detect "model bias" per se but **epistemic settledness in training corpora**. Variance is reflection of actual scholarly disagreement; consensus is reproduction of canonical narrative.
+- New **§7.7 "What scalar character axes do and don't capture"** addresses the critique that 1–10 character scoring misses the morally interesting questions (ends/means, action/inaction, proportionality). Names the limit honestly; treats scalar axes as the *input layer* not the output; opens a Phase 2 *consequentialist-pairing axes* methodology arm.
+- Title and author block unchanged. Date updated to 2026-04-29.
+
+Operational changes (not in the paper itself, but affecting the publication context):
+- Repository restructured: public artifacts now live in a `repo/` subdirectory; private working material at parent level. Force-push to GitHub (`karma-canada/tribunal`) overwrote prior history with a single clean root commit.
+- The 2026-04-28 Zenodo concept DOI (10.5281/zenodo.19852629, containing v0.1 and v0.1.1) was retired by accident on 2026-04-29 when an attempted version cleanup cascaded to delete all versions. v0.3 will be the first version of a new Zenodo concept DOI per `working/PUBLICATION-METADATA.md`.
+
 ## v0.2 — 2026-04-28
 
 **Phase 1 Track A prototype results folded into §7.** Substantive changes:

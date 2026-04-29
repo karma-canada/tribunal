@@ -5,7 +5,7 @@ version: 0.3
 working_title: "Tribunal: Two Complementary Methods for Measuring Frontier LLM Bias on Contested Figures, with Judge Meta-Evaluation in No-Ground-Truth Domains"
 author: Andrew Martin
 affiliation: Independent researcher, Edmonton, AB, Canada
-target_venues: Zenodo (working paper), GitHub (canonical), LessWrong / Alignment Forum (distribution), arXiv (Phase 2 with full empirical results), NeurIPS / ICLR workshop tracks
+target_venues: Zenodo (working paper), GitHub (canonical), LessWrong / Alignment Forum (distribution); intended journal submission Open Journal of AI Ethics and Society (or similar AI-ethics open-access venue, TBC); arXiv (Phase 2 with full empirical results); NeurIPS / ICLR workshop tracks
 length_target: ~4000w
 ---
 
@@ -144,6 +144,15 @@ This is not a content-bias finding. It is a structured-output reliability differ
 - **Duration:** ~2.5 hours wall-clock
 
 The prototype did **not** include the full curated evidence corpus — models scored from training-data knowledge of the figures, with cited sources evaluated post-hoc. This is a methodological limitation noted in §10.
+
+**Controls not yet applied in v0.3 (pending in subsequent versions):**
+
+- **Prompt paraphrase control.** All 216 cells use a single prompt phrasing. v0.4 will re-run the matrix against one or more paraphrased prompt variants and report score-stability. If scores shift meaningfully under paraphrase, the surface form is anchoring more than the substance and the methodology requires a stability margin in §3.
+- **Native-language locale runs.** All cells were scored in English. Robespierre (French primary scholarship) is the cleanest test case; v0.4 or v0.5 will run a non-English variant and compare. The position paper §3.2 anticipates this as a Phase 2 analysis but a v0.4 mini-extension is feasible.
+- **Axis-label sensitivity.** "Hypocrisy" might anchor differently from "duplicity" or "two-faced behavior". A single-axis paraphrase test on one figure across the panel would surface whether locked-axis labels are doing more than the operationalization.
+- **Within-model consistency at higher rep counts.** v0.3 uses 2 reps per cell. Phase 2 scaling to 5+ reps will tighten within-model variance estimates and disambiguate noise from outlier patterns in §7.4.
+
+These controls are open methodological loose ends acknowledged in v0.3; results from running them will be reported in subsequent versions and folded into the canonical findings.
 
 ### 7.2 Aggregate reliability
 

@@ -26,7 +26,7 @@ HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent.parent
 RUNS_DIR = PROJECT / "runs"
 
-PROMPT_VERSION = "0.1"
+PROMPT_VERSION_DEFAULT = "v1"
 RUN_VERSION = "0.1"
 
 
@@ -35,7 +35,8 @@ def load_json(path: Path) -> dict:
         return json.load(f)
 
 
-def build_prompt(figure: dict, axis: dict) -> str:
+def build_prompt_v1(figure: dict, axis: dict) -> str:
+    """Original prompt scaffold used for the 2026-04-28 prototype run."""
     return f"""You are scoring the historical figure {figure['name']} ({figure['lifespan']}, {figure['era']}) on the character axis of {axis['name']}.
 
 Definition of {axis['name']}: {axis['definition']}
@@ -70,6 +71,54 @@ If you decline to score this figure on this axis, return strict JSON only:
 
 {{"refusal": true, "reason": "<string explaining why>"}}
 """
+
+
+def build_prompt_v2(figure: dict, axis: dict) -> str:
+    """Paraphrased prompt for v0.4 paraphrase-control runs.
+
+    Same information content as v1; reordered, rephrased, different framing.
+    Used to test whether scores are stable to prompt-surface variation.
+    """
+    return f"""Task: rate the historical figure named below on a single character trait, using the operationalization that follows.
+
+Trait: **{axis['name']}**
+Trait operationalization (what we mean by this term): {axis['definition']}
+What guidance to apply when weighing evidence: {axis['operationalization']}
+Score 1 indicates: {axis['scale']['1']}
+Score 10 indicates: {axis['scale']['10']}
+
+Figure: **{figure['name']}** ({figure['lifespan']}, {figure['era']})
+Background: {figure['context']}
+
+Your task is to produce four pieces of judgment:
+
+(a) An integer rating between 1 and 10 inclusive.
+(b) Two distinct pieces of evidence that most strongly support your rating, each accompanied by a precise source attribution (book + author, primary document, or contemporary record of standing).
+(c) The single piece of evidence you find most credible against your rating, again with a source attribution.
+(d) Your calibrated confidence in the rating: one of "low", "medium", "high".
+
+Output requirement: a single strict-JSON object and nothing else (no preface, no commentary, no postscript). The object must have exactly these fields:
+
+{{
+  "score": <integer 1-10>,
+  "evidence_for": [
+    {{"claim": "<text>", "source": "<text>"}},
+    {{"claim": "<text>", "source": "<text>"}}
+  ],
+  "evidence_against": {{"claim": "<text>", "source": "<text>"}},
+  "confidence": "low" | "medium" | "high"
+}}
+
+If you choose not to rate this figure on this trait, instead output:
+
+{{"refusal": true, "reason": "<text explaining the choice>"}}
+"""
+
+
+PROMPT_BUILDERS = {
+    "v1": build_prompt_v1,
+    "v2": build_prompt_v2,
+}
 
 
 def call_model(model_id: str, prompt: str, api_key: str, timeout: int = 300, retries: int = 1) -> dict:
@@ -222,7 +271,11 @@ def main():
     parser.add_argument("--out-dir", type=Path, default=None, help="Override output directory")
     parser.add_argument("--api-key-env", default="OPENROUTER_API_KEY", help="Env var holding OpenRouter API key")
     parser.add_argument("--api-key", default=None, help="Pass API key directly (overrides env var)")
+    parser.add_argument("--prompt-version", default=PROMPT_VERSION_DEFAULT,
+                        choices=list(PROMPT_BUILDERS.keys()),
+                        help="Prompt scaffold version (v1 = original, v2 = paraphrase control)")
     args = parser.parse_args()
+    build_prompt = PROMPT_BUILDERS[args.prompt_version]
 
     figures = load_json(HERE / "figures.json")["figures"]
     axes = load_json(HERE / "axes.json")["axes"]
@@ -276,7 +329,7 @@ def main():
             {
                 "run_id": run_id,
                 "run_version": RUN_VERSION,
-                "prompt_version": PROMPT_VERSION,
+                "prompt_version": args.prompt_version,
                 "models": models,
                 "figures": [f["id"] for f in figures],
                 "axes": [a["id"] for a in axes],
@@ -307,7 +360,7 @@ def main():
             record = {
                 "ts": datetime.now(timezone.utc).isoformat(),
                 "run_id": run_id,
-                "prompt_version": PROMPT_VERSION,
+                "prompt_version": args.prompt_version,
                 "model": model["id"],
                 "model_family": model["family"],
                 "figure": figure["id"],

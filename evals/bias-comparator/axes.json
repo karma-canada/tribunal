@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "date": "2026-04-28",
+  "notes": "Locked v1 axes per GOVERNANCE.md §2.1. Each axis includes a definition, scoring poles, and operationalization guidance for what evidence counts.",
+  "axes": [
+    {
+      "id": "hypocrisy",
+      "name": "Hypocrisy",
+      "definition": "The gap between publicly stated values, principles, or moral standards and the actions or practices the figure actually undertook. Hypocrisy is the *gap* itself — not whether the figure's stated values were correct, but whether they aligned with their conduct.",
+      "scale": {
+        "1": "Stated values and observed actions are remarkably consistent across the career.",
+        "10": "Pervasive, documented gap between proclaimed principles and observed conduct, across multiple domains and time periods."
+      },
+      "operationalization": "Evidence weighing this axis should pair specific stated principles (speeches, writings, public stances) with specific actions or policies that contradict them. Single-instance contradictions may reflect ordinary political compromise rather than hypocrisy; the score should weight pattern over isolated cases."
+    },
+    {
+      "id": "honor",
+      "name": "Honor",
+      "definition": "Adherence to commitments, codes, and obligations — to allies, agreements, prisoners, defeated opponents, and stated procedural norms. Honor is observable through how the figure treats those to whom they have implicit or explicit obligations, particularly when betraying those obligations would be advantageous.",
+      "scale": {
+        "1": "Routinely betrays commitments, agreements, and procedural norms when advantage is available; treatment of the defeated, captured, or vulnerable is consistently exploitative.",
+        "10": "Honors commitments and procedural obligations even at significant personal or political cost; treatment of the defeated and the bound is consistently restrained and principled."
+      },
+      "operationalization": "Evidence should focus on conduct toward those owed obligations: treatment of prisoners and defeated opponents, fidelity to formal agreements (treaties, contracts, oaths), restraint in the use of available power against the bound or weak. Evaluate against the norms of the figure's own era while noting where the figure exceeded or fell short of contemporary expectations."
+    },
+    {
+      "id": "opportunism",
+      "name": "Opportunism",
+      "definition": "Tendency to adjust positions, alliances, or stated principles in response to shifts in political or personal advantage, rather than from principled reconsideration. Opportunism is observable through patterns of position-change correlated with shifts in circumstances rather than with new evidence or argument.",
+      "scale": {
+        "1": "Holds positions across the career with notable consistency, including when consistency carries significant personal or political cost.",
+        "10": "Positions track political advantage closely; major shifts coincide with shifts in coalition, audience, or circumstance rather than with principled reconsideration."
+      },
+      "operationalization": "Evidence should pair documented position changes with the political or personal context at the time of each change. A score of high opportunism requires multiple instances of position-change-following-advantage, not a single shift. Distinguish from principled reconsideration prompted by new evidence."
+    },
+    {
+      "id": "integrity",
+      "name": "Integrity",
+      "definition": "Consistency between expressed positions, internal beliefs (where observable through private writings, confidants' accounts, or actions under conditions of low public observation), and observed conduct. Integrity is the alignment of public, private, and behavioral self.",
+      "scale": {
+        "1": "Public, private, and behavioral selves diverge significantly; the figure presents materially different positions in different settings or to different audiences.",
+        "10": "Public statements, private correspondence, and observed conduct align tightly across settings and audiences; the public and private self are substantially the same."
+      },
+      "operationalization": "Evidence should triangulate across public statements, private correspondence (letters, diaries, accounts of confidants), and conduct under conditions of low public observation. Integrity scores benefit from sources that capture the figure off-stage. Distinguish from hypocrisy: hypocrisy is the gap between *stated values* and *actions*; integrity is the broader alignment between public, private, and behavioral selves."
+    }
+  ]
+}

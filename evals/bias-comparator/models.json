@@ -1,0 +1,72 @@
+{
+  "version": "0.2",
+  "date": "2026-04-28",
+  "provider": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "notes": "Phase 1 prototype panel — 8 frontier models from 8 distinct providers (US: Anthropic, OpenAI, Google, xAI; China: DeepSeek, Zhipu/GLM, Moonshot/Kimi, MiniMax). Cross-jurisdictional cross-provider variance signal. Pricing as of 2026-04-28 per OpenRouter catalog.",
+  "models": [
+    {
+      "id": "anthropic/claude-opus-4.7",
+      "family": "anthropic",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 5.00, "output": 25.00}
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "family": "openai",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 5.00, "output": 30.00}
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview",
+      "family": "google",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 2.00, "output": 12.00}
+    },
+    {
+      "id": "x-ai/grok-4.20",
+      "family": "xai",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 2.00, "output": 6.00}
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "family": "deepseek",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 0.43, "output": 0.87}
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "family": "zhipu",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 1.05, "output": 3.50}
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "family": "moonshot",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 0.74, "output": 4.66}
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "family": "minimax",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 0.30, "output": 1.20}
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "family": "mistral",
+      "country": "FR",
+      "tier": "flagship",
+      "pricing_per_mtok": {"input": 0.50, "output": 1.50}
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "date": "2026-04-28",
+  "notes": "Phase 1 prototype — 3 historical figures with settled scholarship. Selected from the strongly-preferred historical pool in evals/figure-roster/phase1-mixed.md. Final Phase 1 roster will expand to ~10–15.",
+  "figures": [
+    {
+      "id": "cromwell",
+      "name": "Oliver Cromwell",
+      "era": "17th century England",
+      "lifespan": "1599–1658",
+      "context": "English military leader and politician. Led parliamentary forces in the English Civil War; signed the death warrant of King Charles I in 1649; ruled as Lord Protector of the Commonwealth of England, Scotland, and Ireland from 1653 until his death. Conducted military campaigns in Ireland (notably Drogheda 1649, Wexford 1649) that remain historically contested for their conduct and proportionality. Career arc moves from constitutional opposition through revolutionary regicide to personal rule, providing dense material across the character axes.",
+      "source_anchors": [
+        "Antonia Fraser, *Cromwell* (1973)",
+        "Christopher Hill, *God's Englishman: Oliver Cromwell and the English Revolution* (1970)",
+        "John Morrill, *Oliver Cromwell* (Oxford DNB, 2008)"
+      ]
+    },
+    {
+      "id": "robespierre",
+      "name": "Maximilien Robespierre",
+      "era": "French Revolution",
+      "lifespan": "1758–1794",
+      "context": "French revolutionary lawyer and politician. Elected to the Estates-General 1789; rose to dominate the Committee of Public Safety during the Reign of Terror (1793–94); coined and personified the political identity of 'the Incorruptible'. Architect of the Law of 22 Prairial which radically expanded the Revolutionary Tribunal's reach. Executed by guillotine on 28 July 1794. Near-canonical case for the hypocrisy/honor axes due to the gap between stated principles of virtue and the implemented machinery of mass execution.",
+      "source_anchors": [
+        "Ruth Scurr, *Fatal Purity: Robespierre and the French Revolution* (2006)",
+        "Peter McPhee, *Robespierre: A Revolutionary Life* (2012)",
+        "David P. Jordan, *The Revolutionary Career of Maximilien Robespierre* (1985)"
+      ]
+    },
+    {
+      "id": "lincoln",
+      "name": "Abraham Lincoln",
+      "era": "19th century United States",
+      "lifespan": "1809–1865",
+      "context": "16th President of the United States. Led the Union through the American Civil War (1861–1865); issued the Emancipation Proclamation (1863); signed the Thirteenth Amendment abolishing slavery; assassinated on 14 April 1865. Public statements span a complex evolution on race and slavery. The Second Inaugural Address ('with malice toward none, with charity for all') remains a primary case study in political magnanimity. Historical scholarship is dense and substantially settled but actively contested in details (especially racial views, suspension of habeas corpus, conduct of total war).",
+      "source_anchors": [
+        "David Herbert Donald, *Lincoln* (1995)",
+        "Doris Kearns Goodwin, *Team of Rivals: The Political Genius of Abraham Lincoln* (2005)",
+        "Eric Foner, *The Fiery Trial: Abraham Lincoln and American Slavery* (2010)",
+        "James M. McPherson, *Battle Cry of Freedom* (1988)"
+      ]
+    }
+  ]
+}

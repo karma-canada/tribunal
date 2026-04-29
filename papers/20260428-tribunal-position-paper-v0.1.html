@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Andrew Martin" />
+  <meta name="dcterms.date" content="2026-04-28" />
+  <title>Tribunal: Two Complementary Methods for Measuring Frontier LLM Bias on Contested Figures, with Judge Meta-Evaluation in No-Ground-Truth Domains</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+body { font-family: Georgia, serif; max-width: 720px; margin: 2em auto; padding: 0 1.5em; line-height: 1.55; color: #222; }
+h1 { font-size: 1.6em; line-height: 1.25; }
+h2 { font-size: 1.25em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
+h3 { font-size: 1.05em; margin-top: 1.5em; }
+hr { border: 0; border-top: 1px solid #ccc; margin: 2em 0; }
+code { background: #f4f4f4; padding: 1px 4px; border-radius: 2px; font-size: 0.92em; }
+pre { background: #f4f4f4; padding: 0.8em; border-radius: 4px; overflow-x: auto; }
+blockquote { border-left: 3px solid #888; margin-left: 0; padding-left: 1em; color: #444; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 0.4em 0.7em; }
+th { background: #f4f4f4; }
+em { color: #333; }
+
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Tribunal: Two Complementary Methods for Measuring
+Frontier LLM Bias on Contested Figures, with Judge Meta-Evaluation in
+No-Ground-Truth Domains</h1>
+<p class="author">Andrew Martin</p>
+<p class="date">2026-04-28</p>
+</header>
+<h1 id="tribunal-two-complementary-methods-for-measuring-frontier-llm-bias-on-contested-figures-with-judge-meta-evaluation-in-no-ground-truth-domains">Tribunal:
+Two Complementary Methods for Measuring Frontier LLM Bias on Contested
+Figures, with Judge Meta-Evaluation in No-Ground-Truth Domains</h1>
+<p><strong>Andrew Martin¹</strong> ¹<em>Independent researcher,
+Edmonton, AB, Canada</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>Frontier large language models are widely used both as raters of
+other models (LLM-as-judge) and as substantive interlocutors on
+contested questions of politics, history, and character. Both uses are
+downstream of the same unanswered question: how reliable are LLMs as
+evaluators in domains without verifiable ground truth? Existing work has
+documented LLM-as-judge biases — position, length, style,
+self-preference — almost exclusively in domains with answer keys. The
+questions for which scalable oversight matters most are not those
+domains.</p>
+<p>We introduce <strong>Tribunal</strong>, a benchmark methodology with
+two complementary tracks. <strong>Track A</strong> is a <em>political
+bias comparator</em>: an LLM-vs-LLM scoring matrix in which N frontier
+models independently score M public figures (historical and
+contemporary) on K character axes, with the inter-model variance and
+refusal patterns as the primary signal. The result is a public,
+versioned map of where the political bias of each frontier model lives.
+<strong>Track B</strong> is an <em>adversarial debate-and-judge
+meta-eval</em>: LLM-vs-LLM debate over the same scoring claims,
+adjudicated by a rotating multi-model judge panel, with adversarial
+probes (planted citations, position swaps, weakmanning) and a human-jury
+subsample. Track B drills into whether the disagreements Track A
+surfaces survive scrutiny, and whether LLM judges can be trusted as the
+adjudicators in unverifiable domains.</p>
+<p>The two methods are designed to feed each other. Track A produces a
+difficulty-and-disagreement landscape; Track B mechanistically probes
+the highest-disagreement regions of that landscape. We describe the
+architecture of both tracks, a partial-ground-truth anchor that ties
+unverifiable claims to verifiable sub-claims, the governance and
+jurisdictional choices we argue are part of the methodology, and a
+phased release roadmap. This is a position paper. Empirical findings
+will be reported in companion papers as the prototype matures.</p>
+<h2 id="introduction">1. Introduction</h2>
+<p>The deployed footprint of large language models has made two
+overlapping uses load-bearing for AI evaluation infrastructure. First,
+models are used as <em>judges</em> of other models — MT-Bench,
+AlpacaEval, AlpacaFarm, G-Eval, and most production preference-data
+pipelines depend on language models grading language-model outputs at
+scale. Second, models are used as <em>substantive raters</em> of
+contested claims — when end-users ask “what kind of person is X?” or “is
+Y a good leader?,” the model returns an answer. Both uses are
+evaluations made under conditions of partial or absent ground truth.</p>
+<p>The empirical literature on LLM-as-judge has cataloged biases —
+position, length, style, self-preference, sycophancy — almost
+exclusively in domains where a correct answer exists [Zheng et al. 2023;
+Wang et al. 2024]. The empirical literature on LLM political bias has
+measured ideological positioning [Santurkar et al. 2023; Rozado 2023]
+but rarely with the per-figure granularity, multi-axis structure, or
+adversarial follow-up needed to separate model bias from model
+uncertainty.</p>
+<p>Tribunal addresses both gaps with two complementary
+methodologies:</p>
+<ul>
+<li><strong>Track A (Bias Comparator):</strong> A direct scoring
+instrument. N frontier models score M figures on K character axes;
+differences between models are the bias signal. Simple, scalable,
+immediately legible.</li>
+<li><strong>Track B (Debate and Judge Meta-Eval):</strong> An
+adversarial mechanism. Models debate the same scoring claims;
+multi-model judge panels adjudicate; adversarial probes test specific
+failure modes. Methodologically richer, slower to scale.</li>
+</ul>
+<p>The tracks are not redundant. Track A maps the empirical landscape;
+Track B explains it. Track A surfaces <em>which</em> claims and
+<em>which</em> model-pairs most disagree; Track B asks whether that
+disagreement survives forced engagement with the strongest
+counter-argument and whether LLM judges can be trusted to call the
+result.</p>
+<h2 id="the-two-questions">2. The two questions</h2>
+<p><strong>Question A (descriptive).</strong> When frontier LLMs score
+the same figures on the same character axes, where does inter-model
+variance live? Which figures, axes, and model-pairs produce the largest
+deltas? What is each model’s refusal surface, and is refusal correlated
+with variance? <em>This is the question the public most readily
+understands and is, on its own, sufficient for an externally legible
+result.</em></p>
+<p><strong>Question B (mechanistic).</strong> When the same models
+defend their scores under adversarial debate, do the scores hold? Which
+biases (concession penalty, citation-surface acceptance, weakmanning
+blindness, position bias) are most predictive of judge unreliability?
+Does judge accuracy on verifiable factual sub-claims transfer to
+unverifiable character claims? <em>This is the question that informs
+whether LLM-as-judge can scale to alignment-relevant oversight.</em></p>
+<p>The structural argument of this paper is that A and B should be
+answered together. Answering only A produces a politically loaded
+leaderboard whose findings are difficult to defend under attack.
+Answering only B produces a methodology paper few non-specialists can
+read. Together they produce both the empirical artifact and the
+mechanistic explanation.</p>
+<h2 id="track-a-political-bias-comparator">3. Track A: Political bias
+comparator</h2>
+<h3 id="design">3.1 Design</h3>
+<p>Each model in a panel of N frontier LLMs is presented with each
+figure in a curated roster of M figures and asked to produce a numeric
+score on each of K character axes (initial set: hypocrisy, honor,
+opportunism, integrity, with extension axes including cruelty,
+mendacity, vanity, magnanimity, discipline, courage, loyalty,
+self-knowledge). Each scoring run requires an evidence citation. Scoring
+is run multiple times per (model, figure, axis) to measure within-model
+variance.</p>
+<p>Outputs include: - The <strong>score matrix</strong> S ∈ ℝ^(N×M×K),
+with within-model variance per cell - The <strong>refusal map</strong> —
+which (model, figure, axis) cells the model refuses, hedges, or returns
+unparseable output - The <strong>citation map</strong> — what evidence
+each model invokes; verifiable sub-claims extracted automatically - The
+<strong>per-figure difficulty score</strong>, aggregating inter-model
+variance, refusal rate, and citation contestedness</p>
+<h3 id="what-the-matrix-reveals">3.2 What the matrix reveals</h3>
+<p>Inter-model deltas on the same (figure, axis) are a direct measure of
+model disagreement. The <em>pattern</em> of those deltas across the
+political spectrum is a measure of bias: a model that consistently
+scores left-coded figures more leniently than right-coded figures on the
+same axis is exhibiting an asymmetry that calls for explanation,
+regardless of which direction the asymmetry runs.</p>
+<p>Critical analyses include: <strong>symmetry tests</strong> (do paired
+figures on opposing political sides receive comparable treatment for
+comparable behavior?); <strong>refusal asymmetry</strong> (does the
+model refuse to score figures from one side more readily than the
+other?); <strong>language-locale skew</strong> (do scores change when
+prompts and evidence are translated to the figure’s native language?);
+and <strong>temporal drift</strong> (do scores change as new training
+data accumulates across model versions?).</p>
+<h3 id="why-this-is-the-leading-edge">3.3 Why this is the leading
+edge</h3>
+<p>Track A is the leading edge of the project because its outputs are
+immediately legible to non-specialists, its build cost is low, and its
+defamation surface is structurally lower than direct
+character-benchmarking. The artifact is “Model X said Y about figure Z,
+citing W” — a faithful report of model behavior, not an editorial claim
+about the figure. The story is the <em>spread</em> across models, not
+any single model’s score. This framing materially changes both legal
+posture and reception.</p>
+<h2 id="track-b-debate-and-judge-meta-evaluation">4. Track B: Debate and
+judge meta-evaluation</h2>
+<h3 id="three-layer-architecture">4.1 Three-layer architecture</h3>
+<p><strong>Layer 1 — Debaters.</strong> Two LLMs are each assigned a
+position on a Track-A scoring claim (typically a high-variance cell from
+the matrix). Three rounds: opening with score and two strongest pieces
+of evidence; rebuttal that must engage the opponent’s strongest
+argument; closing with at least one required concession. Debaters draw
+from a shared, versioned evidence corpus.</p>
+<p><strong>Layer 2 — Judges.</strong> A panel of LLMs (rotated across
+model families) adjudicates each debate using a structured rubric:
+rigor, rhetoric, evidence quality, engagement-with-strongest-argument,
+concession quality, citation verification. Multiple judges per debate,
+anonymized to one another, to test self-preference.</p>
+<p><strong>Layer 3 — Meta-eval.</strong> Judges are evaluated through
+(a) adversarial probes (planted fabricated citations, position swaps,
+weakmanning probes, length-controlled pairs), (b) inter-judge agreement
+matrices, (c) a politically balanced human-jury subsample (~10% of
+debates), and (d) the partial-ground-truth anchor in §4.2.</p>
+<h3 id="partial-ground-truth-anchor">4.2 Partial-ground-truth
+anchor</h3>
+<p>Each debate generates <em>factual sub-claims</em> — verifiable
+propositions extracted from debater turns. Because sub-claims have
+ground truth, judge accuracy on them is directly measurable. The
+relationship between sub-claim accuracy and unverifiable-claim behavior
+is the central empirical contribution. Judges that fail on sub-claims
+are predicted to be unreliable on character claims; whether judges that
+succeed on sub-claims also succeed on character claims is an open
+question this design can answer.</p>
+<h3 id="adversarial-probe-set">4.3 Adversarial probe set</h3>
+<p>Designed to expose specific judge failure modes: <strong>citation
+fabrications</strong> (insert plausibly-cited but false evidence;
+measure catch rate); <strong>position swaps</strong> (identical
+transcripts with debater positions swapped; measure verdict
+consistency); <strong>length-controlled pairs</strong> (identical
+arguments at different lengths; measure length bias);
+<strong>weakmanning probes</strong> (pair a debater addressing the
+strongest opposing argument against one addressing a weak one; measure
+whether judges penalize the latter); <strong>self-preference
+probes</strong> (anonymize debater identity; compare verdicts to
+non-anonymized condition).</p>
+<h3 id="per-figure-difficulty-score">4.4 Per-figure difficulty
+score</h3>
+<p>Each figure carries a <em>difficulty score</em> aggregating Track A
+inter-model variance, redteam exploit success rate, evidence-corpus
+contestedness, and Track B inter-judge disagreement rate. Difficulty is
+a separate axis from accuracy. Two analyses follow: a leaderboard column
+that signals where model disagreements are signal vs. noise, and
+<em>difficulty-weighted scoring</em> as a metric harder to game than raw
+consensus.</p>
+<h2 id="integration-of-the-two-tracks">5. Integration of the two
+tracks</h2>
+<p>Track A and Track B are designed to interlock:</p>
+<ul>
+<li>Track A’s high-variance cells are Track B’s most interesting debate
+cases. Cells where models agree are uninteresting to debate; cells where
+they disagree most are where adversarial pressure can reveal whether
+disagreement is principled or fragile.</li>
+<li>Track B’s findings about judge reliability inform how Track A’s
+matrix should be weighted. If a model is shown to be a poor judge, its
+Track A scores deserve less weight in any consensus aggregation.</li>
+<li>The difficulty score is computed across both tracks. A figure has
+high difficulty if Track A produces high inter-model variance
+<em>and</em> Track B produces high judge disagreement <em>and</em>
+adversarial probes succeed at unusually high rates. Difficulty thereby
+has triangulated signal, not single-source signal.</li>
+</ul>
+<p>In phasing, Track A ships first because it is faster to build and
+more legible. Track B is built in parallel and ships at Phase 2 with the
+high-variance cells from Track A as its first targets.</p>
+<h2 id="eval-governance-and-jurisdictional-independence">6. Eval
+governance and jurisdictional independence</h2>
+<p>Governance and jurisdictional decisions are part of the methodology,
+not aesthetic choices made downstream of it.</p>
+<p><strong>Curation criteria.</strong> Phase 1 figure inclusion uses
+balanced left/right pairings on a mixed historical-and-contemporary
+roster. Phase 1 deliberately includes both historical figures with
+settled scholarship and contemporary figures with live political
+relevance, to demonstrate that the methodology produces meaningful
+signal across both. Phase 3 expands the contemporary roster
+significantly. Inclusion is pre-registered. The author’s home-country
+sitting head of state is excluded until at least one electoral cycle has
+passed.</p>
+<p><strong>Evidence corpus standards.</strong> Every claim cites a
+source. Sources versioned alongside the dataset. Wikipedia is
+permissible but supplementary; primary-secondary scholarly works are
+required for character-relevant claims. A separate paper on
+evidence-corpus governance is in the publication queue.</p>
+<p><strong>Multi-jurisdictional hosting.</strong> Canonical artifact on
+Hugging Face; mirrored to a Canadian academic repository (Borealis or
+equivalent); code on GitHub with a Canadian Git mirror.</p>
+<p><strong>Funding exclusions.</strong> No funding from frontier-model
+providers whose models appear on the leaderboard. No funding from
+political-aligned foundations. Canadian academic funders (NSERC, CIFAR,
+SSHRC, Mila, Vector) preferred.</p>
+<p><strong>COI handling.</strong> Author affiliations declared. Sitting
+heads of state in the author’s country of residence excluded until at
+least one electoral cycle has passed since their tenure.</p>
+<p>We argue the field needs <em>plural</em> sovereign benchmarks rather
+than consolidated ones, and that the question of where evals live and
+who governs them is a methodological question.</p>
+<h2 id="findings-preview">7. Findings preview</h2>
+<p><em>[Phase 1 prototype results to be inserted. Expected sections:
+Track A score matrix and variance heatmap on initial roster; refusal
+asymmetry analysis; symmetry-test results on left/right pairings; Track
+B pilot (3–5 highest-variance cells) with judge-agreement and
+probe-catch results; first transfer-rate measurements between sub-claim
+accuracy and unverifiable-claim behavior; difficulty
+distribution.]</em></p>
+<p>Pre-registered predictions (Track A): - Inter-model variance will be
+highest on contemporary figures and lowest on historical figures with
+settled scholarship. - At least one frontier model will exhibit a
+measurable refusal asymmetry (&gt;1.5x refusal rate on one side of a
+paired left/right roster). - Model self-consistency (within-model
+run-to-run variance) will be lower than between-model variance on most
+cells.</p>
+<p>Pre-registered predictions (Track B): - Judge accuracy on verifiable
+sub-claims will be high but not at ceiling (&gt;80%, &lt;95%). -
+Transfer to unverifiable claims will be partial. - At least one judge
+model will exhibit a measurable concession penalty. -
+Citation-fabrication catch rates will vary by an order of magnitude
+across model families.</p>
+<p>Wrong predictions are themselves findings. Pre-registration is the
+discipline.</p>
+<h2 id="discussion">8. Discussion</h2>
+<p><strong>Implications for scalable oversight.</strong>
+Debate-as-alignment proposals have largely assumed honest, calibrated
+judges. Track B is one attempt at the empirical answer for whether LLM
+judges meet that bar in the conditions under which the question
+matters.</p>
+<p><strong>Implications for political-bias measurement.</strong> Track A
+is one attempt at a per-figure, multi-axis, multi-model bias map that
+goes beyond ideological-positioning instruments. Combined with Track B’s
+mechanistic probe, the methodology offers a path past the “is Model X
+biased?” yes-or-no debate toward “where, on what, and how robustly is
+each model biased relative to the others?”</p>
+<p><strong>AI deference.</strong> Single-shot LLM scoring of contested
+questions trains readers to defer (“the AI says 9”). Track A’s design —
+<em>show the spread, not the score</em> — and Track B’s design —
+<em>show the debate, then the verdict</em> — are both attempts to invert
+that deference dynamic. The product mechanic carries the design
+philosophy.</p>
+<p><strong>Plural benchmarks.</strong> A field in which a small number
+of US-hosted leaderboards govern the comparative reputation of all
+frontier models is not robust. Tribunal is one attempt at a sovereign,
+jurisdictionally independent benchmark in a different methodological
+lineage. We argue more should exist, in more jurisdictions, with
+overlapping but non-identical methodologies.</p>
+<h2 id="artifact-roadmap-and-release-cadence">9. Artifact roadmap and
+release cadence</h2>
+<ul>
+<li><strong>Phase 0</strong> (now): position paper skeleton, governance
+and identity documents, prototype spec for both tracks.</li>
+<li><strong>Phase 1</strong> (1–4 weeks): Track A bias comparator MVP on
+~10–15 mixed-roster figures × 4 axes × 5 models; small Track B debate
+proof-of-concept on 2–3 highest-variance cells; HF dataset v0.1
+(unlisted).</li>
+<li><strong>Phase 2</strong> (1–3 months): Track A scaled to 30–50
+figures × 8 axes × 8 frontier models; full Track B adversarial probes
+and human-jury subsample; arXiv preprint (this paper, with empirical
+results); custom leaderboard site live; formal HF release.</li>
+<li><strong>Phase 3</strong> (3–6 months): contemporary-figure roster
+expansion with full COI protocols; coordinated press cycle; conference
+workshop submission.</li>
+<li><strong>Ongoing</strong>: quarterly version bumps; community-PR
+governance; recurring frontier-model report card.</li>
+</ul>
+<h2 id="references-sketch">10. References (sketch)</h2>
+<ul>
+<li>Irving, G., Christiano, P., &amp; Amodei, D. (2018). <em>AI safety
+via debate.</em> arXiv:1805.00899.</li>
+<li>Zheng, L., et al. (2023). <em>Judging LLM-as-a-judge with MT-Bench
+and Chatbot Arena.</em> NeurIPS.</li>
+<li>Wang, P., et al. (2024). Large language models are not fair
+evaluators.</li>
+<li>Santurkar, S., et al. (2023). <em>Whose opinions do language models
+reflect?</em> ICML.</li>
+<li>Rozado, D. (2023). <em>The political biases of ChatGPT.</em> Social
+Sciences.</li>
+<li>Bai, Y., et al. (2022). <em>Constitutional AI: Harmlessness from AI
+feedback.</em> Anthropic.</li>
+<li>Christiano, P., Shlegeris, B., &amp; Amodei, D. (2018).
+<em>Supervising strong learners by amplifying weak experts.</em></li>
+<li>Burns, C., et al. (2024). <em>Weak-to-strong generalization.</em>
+OpenAI.</li>
+<li>Krippendorff, K. (2004). <em>Content analysis: An introduction to
+its methodology.</em></li>
+<li>Additional references on LLM-as-judge bias surveys,
+debate-as-oversight follow-ups, and AI political-bias measurement to be
+filled during Phase 1 literature review.</li>
+</ul>
+<hr />
+<p><em>This skeleton is the north-star document. It anchors scope,
+methodology, and posture across both tracks. The full draft is produced
+after Phase 1 prototype results. Expected upgrade points: §7 becomes
+empirical; §3.2 and §4.3 gain specific result tables; §8 gains
+comparison to contemporary judge-eval and political-bias literature
+published before submission.</em></p>
+</body>
+</html>

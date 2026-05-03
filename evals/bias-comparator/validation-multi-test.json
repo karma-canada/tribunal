@@ -1,0 +1,73 @@
+{
+  "version": "v0.6-validation-multi",
+  "date": "2026-05-02",
+  "notes": "Six-figure subset for v0.6 framing-test (v5-game scaffold) and axis-loading-test (v6-neutral scaffold + axes-v2). Figures span the variance regime and density tiers: Augustus (thin, contested), Stalin (dense, canonized-low), Lincoln (dense, canonized-high), Bismarck (dense, contested), Mao (dense, canonized-low), Cromwell (medium, contested). Each test pairs same cells against the v0.5 production baseline (axes-v1, v1 prompt scaffold) for matched-cell comparison.",
+  "figures": [
+    {
+      "id": "augustus",
+      "name": "Augustus Caesar (Octavian)",
+      "era": "Roman Republic / early Roman Empire",
+      "lifespan": "63 BCE – 14 CE",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Anthony Everitt, *Augustus: The Life of Rome's First Emperor* (2006)",
+        "Adrian Goldsworthy, *Augustus: First Emperor of Rome* (2014)"
+      ]
+    },
+    {
+      "id": "stalin",
+      "name": "Joseph Stalin",
+      "era": "20th century Soviet Union",
+      "lifespan": "1878–1953",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Stephen Kotkin, *Stalin* (2 vols. 2014, 2017)",
+        "Robert Service, *Stalin: A Biography* (2004)"
+      ]
+    },
+    {
+      "id": "lincoln",
+      "name": "Abraham Lincoln",
+      "era": "19th century United States",
+      "lifespan": "1809–1865",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "David Herbert Donald, *Lincoln* (1995)",
+        "Doris Kearns Goodwin, *Team of Rivals* (2005)"
+      ]
+    },
+    {
+      "id": "bismarck",
+      "name": "Otto von Bismarck",
+      "era": "19th century Germany / Prussia",
+      "lifespan": "1815–1898",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Otto Pflanze, *Bismarck and the Development of Germany* (3 vols., 1990)",
+        "Jonathan Steinberg, *Bismarck: A Life* (2011)"
+      ]
+    },
+    {
+      "id": "mao_zedong",
+      "name": "Mao Zedong",
+      "era": "20th century China",
+      "lifespan": "1893–1976",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Jonathan D. Spence, *Mao Zedong* (1999)",
+        "Philip Short, *Mao: A Life* (1999, rev. 2004)"
+      ]
+    },
+    {
+      "id": "cromwell",
+      "name": "Oliver Cromwell",
+      "era": "17th century England",
+      "lifespan": "1599–1658",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Antonia Fraser, *Cromwell* (1973)",
+        "Christopher Hill, *God's Englishman* (1970)"
+      ]
+    }
+  ]
+}

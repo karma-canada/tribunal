@@ -1,0 +1,43 @@
+{
+  "version": "v0.6-validation-stability",
+  "date": "2026-05-02",
+  "notes": "Stability-test subset for v0.6 robustness suite. Three figures spanning the v0.5 variance regime: Stalin (canonized-low: Stalin/honor mean 1.09, range 1.0), Lincoln (canonized-high: Lincoln/honor mean 8.27, range 1.0), Augustus (contested: Augustus/integrity range 6.0). Used with --reps 10 and --prompt-version v1 to measure within-cell sampling stability at temp=0.2.",
+  "figures": [
+    {
+      "id": "stalin",
+      "name": "Joseph Stalin",
+      "era": "20th century Soviet Union",
+      "lifespan": "1878–1953",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Stephen Kotkin, *Stalin* (2 vols. published 2014, 2017)",
+        "Robert Service, *Stalin: A Biography* (2004)",
+        "Simon Sebag Montefiore, *Stalin: The Court of the Red Tsar* (2003)"
+      ]
+    },
+    {
+      "id": "lincoln",
+      "name": "Abraham Lincoln",
+      "era": "19th century United States",
+      "lifespan": "1809–1865",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "David Herbert Donald, *Lincoln* (1995)",
+        "Doris Kearns Goodwin, *Team of Rivals* (2005)",
+        "Eric Foner, *The Fiery Trial* (2010)"
+      ]
+    },
+    {
+      "id": "augustus",
+      "name": "Augustus Caesar (Octavian)",
+      "era": "Roman Republic / early Roman Empire",
+      "lifespan": "63 BCE – 14 CE",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Anthony Everitt, *Augustus: The Life of Rome's First Emperor* (2006)",
+        "Adrian Goldsworthy, *Augustus: First Emperor of Rome* (2014)",
+        "Ronald Syme, *The Roman Revolution* (1939)"
+      ]
+    }
+  ]
+}

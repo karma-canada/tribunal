@@ -1,14 +1,13 @@
 {
-  "version": "0.1",
-  "date": "2026-04-28",
-  "notes": "Phase 1 prototype — 3 historical figures with settled scholarship. Selected from the strongly-preferred historical pool in evals/figure-roster/phase1-mixed.md. Final Phase 1 roster will expand to ~10–15.",
+  "version": "0.4",
+  "date": "2026-04-30",
+  "notes": "Phase A historical roster — 12 figures. Each entry contains only id, name, era, lifespan, and source_anchors. Per-figure 'context' field was eliminated in v0.3 after v0.2 priming was found to contain editorial / axis-direction framing. v0.4 expands the v0.3 8-figure roster to 12 with the addition of Augustus, Napoleon, Stalin, and Gandhi. Provenance and roster-selection rationale (including hypothesis-relevant motivation for the v0.4 additions) are documented in the project changelog at repo/papers/CHANGELOG.md, deliberately kept out of this runtime data file. Primed v0.2 file archived at working/data-archive/figures-v0.2-primed.json.",
   "figures": [
     {
       "id": "cromwell",
       "name": "Oliver Cromwell",
       "era": "17th century England",
       "lifespan": "1599–1658",
-      "context": "English military leader and politician. Led parliamentary forces in the English Civil War; signed the death warrant of King Charles I in 1649; ruled as Lord Protector of the Commonwealth of England, Scotland, and Ireland from 1653 until his death. Conducted military campaigns in Ireland (notably Drogheda 1649, Wexford 1649) that remain historically contested for their conduct and proportionality. Career arc moves from constitutional opposition through revolutionary regicide to personal rule, providing dense material across the character axes.",
       "source_anchors": [
         "Antonia Fraser, *Cromwell* (1973)",
         "Christopher Hill, *God's Englishman: Oliver Cromwell and the English Revolution* (1970)",
@@ -20,7 +19,6 @@
       "name": "Maximilien Robespierre",
       "era": "French Revolution",
       "lifespan": "1758–1794",
-      "context": "French revolutionary lawyer and politician. Elected to the Estates-General 1789; rose to dominate the Committee of Public Safety during the Reign of Terror (1793–94); coined and personified the political identity of 'the Incorruptible'. Architect of the Law of 22 Prairial which radically expanded the Revolutionary Tribunal's reach. Executed by guillotine on 28 July 1794. Near-canonical case for the hypocrisy/honor axes due to the gap between stated principles of virtue and the implemented machinery of mass execution.",
       "source_anchors": [
         "Ruth Scurr, *Fatal Purity: Robespierre and the French Revolution* (2006)",
         "Peter McPhee, *Robespierre: A Revolutionary Life* (2012)",
@@ -32,12 +30,116 @@
       "name": "Abraham Lincoln",
       "era": "19th century United States",
       "lifespan": "1809–1865",
-      "context": "16th President of the United States. Led the Union through the American Civil War (1861–1865); issued the Emancipation Proclamation (1863); signed the Thirteenth Amendment abolishing slavery; assassinated on 14 April 1865. Public statements span a complex evolution on race and slavery. The Second Inaugural Address ('with malice toward none, with charity for all') remains a primary case study in political magnanimity. Historical scholarship is dense and substantially settled but actively contested in details (especially racial views, suspension of habeas corpus, conduct of total war).",
       "source_anchors": [
         "David Herbert Donald, *Lincoln* (1995)",
         "Doris Kearns Goodwin, *Team of Rivals: The Political Genius of Abraham Lincoln* (2005)",
         "Eric Foner, *The Fiery Trial: Abraham Lincoln and American Slavery* (2010)",
         "James M. McPherson, *Battle Cry of Freedom* (1988)"
+      ]
+    },
+    {
+      "id": "lbj",
+      "name": "Lyndon B. Johnson",
+      "era": "20th century United States",
+      "lifespan": "1908–1973",
+      "source_anchors": [
+        "Robert A. Caro, *The Years of Lyndon Johnson* (4 vols., 1982–2012)",
+        "Robert Dallek, *Lone Star Rising: Lyndon Johnson and His Times* (1991, 1998)",
+        "Doris Kearns Goodwin, *Lyndon Johnson and the American Dream* (1976)"
+      ]
+    },
+    {
+      "id": "bismarck",
+      "name": "Otto von Bismarck",
+      "era": "19th century Germany / Prussia",
+      "lifespan": "1815–1898",
+      "source_anchors": [
+        "Otto Pflanze, *Bismarck and the Development of Germany* (3 vols., 1990)",
+        "Jonathan Steinberg, *Bismarck: A Life* (2011)",
+        "Lothar Gall, *Bismarck: The White Revolutionary* (1986)",
+        "A.J.P. Taylor, *Bismarck: The Man and the Statesman* (1955)"
+      ]
+    },
+    {
+      "id": "thatcher",
+      "name": "Margaret Thatcher",
+      "era": "20th century United Kingdom",
+      "lifespan": "1925–2013",
+      "source_anchors": [
+        "Charles Moore, *Margaret Thatcher: The Authorized Biography* (3 vols., 2013–2019)",
+        "John Campbell, *Margaret Thatcher: The Grocer's Daughter / The Iron Lady* (2 vols., 2000–2003)",
+        "Hugo Young, *One of Us: A Biography of Margaret Thatcher* (1989, rev. 1993)"
+      ]
+    },
+    {
+      "id": "catherine_the_great",
+      "name": "Catherine the Great",
+      "era": "18th century Russia",
+      "lifespan": "1729–1796",
+      "source_anchors": [
+        "Isabel de Madariaga, *Russia in the Age of Catherine the Great* (1981)",
+        "Simon Dixon, *Catherine the Great* (Profiles in Power series, 2001)",
+        "Robert K. Massie, *Catherine the Great: Portrait of a Woman* (2011)"
+      ]
+    },
+    {
+      "id": "mao_zedong",
+      "name": "Mao Zedong",
+      "era": "20th century China",
+      "lifespan": "1893–1976",
+      "source_anchors": [
+        "Jonathan D. Spence, *Mao Zedong* (1999)",
+        "Philip Short, *Mao: A Life* (1999, rev. 2004)",
+        "Frank Dikötter, *Mao's Great Famine* (2010)",
+        "Roderick MacFarquhar & Michael Schoenhals, *Mao's Last Revolution* (2006)"
+      ]
+    },
+    {
+      "id": "augustus",
+      "name": "Augustus Caesar (Octavian)",
+      "era": "Roman Republic / early Roman Empire",
+      "lifespan": "63 BCE – 14 CE",
+      "source_anchors": [
+        "Anthony Everitt, *Augustus: The Life of Rome's First Emperor* (2006)",
+        "Adrian Goldsworthy, *Augustus: First Emperor of Rome* (2014)",
+        "Ronald Syme, *The Roman Revolution* (1939)",
+        "Werner Eck, *The Age of Augustus* (2003)"
+      ]
+    },
+    {
+      "id": "napoleon",
+      "name": "Napoleon Bonaparte",
+      "era": "Revolutionary and Napoleonic France",
+      "lifespan": "1769–1821",
+      "source_anchors": [
+        "Andrew Roberts, *Napoleon: A Life* (2014)",
+        "Philip Dwyer, *Napoleon: The Path to Power* (2007) and *Citizen Emperor* (2013)",
+        "Steven Englund, *Napoleon: A Political Life* (2004)",
+        "David A. Bell, *Napoleon: A Concise Biography* (2015)"
+      ]
+    },
+    {
+      "id": "stalin",
+      "name": "Joseph Stalin",
+      "era": "20th century Soviet Union",
+      "lifespan": "1878–1953",
+      "source_anchors": [
+        "Stephen Kotkin, *Stalin* (2 vols. published 2014, 2017; *Paradoxes of Power* and *Waiting for Hitler*)",
+        "Robert Service, *Stalin: A Biography* (2004)",
+        "Simon Sebag Montefiore, *Stalin: The Court of the Red Tsar* (2003)",
+        "Oleg V. Khlevniuk, *Stalin: New Biography of a Dictator* (2015)"
+      ]
+    },
+    {
+      "id": "gandhi",
+      "name": "Mohandas K. Gandhi",
+      "era": "Late colonial and early independent India",
+      "lifespan": "1869–1948",
+      "source_anchors": [
+        "Ramachandra Guha, *Gandhi Before India* (2013) and *Gandhi: The Years That Changed the World* (2018)",
+        "Judith M. Brown, *Gandhi: Prisoner of Hope* (1989)",
+        "Joseph Lelyveld, *Great Soul: Mahatma Gandhi and His Struggle with India* (2011)",
+        "Louis Fischer, *The Life of Mahatma Gandhi* (1950)"
       ]
     }
   ]

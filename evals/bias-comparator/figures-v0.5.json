@@ -1,0 +1,571 @@
+{
+  "version": "0.5",
+  "date": "2026-05-02",
+  "notes": "Phase A historical roster v0.5 — 44 figures spanning 1st c BCE to late 20th c CE, eight jurisdictional cohorts, three evidence-density tiers. v0.5 expands the v0.4 12-figure roster (added 32 figures covering Africa, Middle East, non-China Asia, Latin America, 20th-c Europe, earlier Europe, classical antiquity, North America). Per-figure entries contain only id, name, era, lifespan, source_anchors, evidence_density. The evidence_density field (thin/medium/dense) is metadata for analysis-time stratification only; it is NOT injected into prompts. Per-figure context-fields remain stripped (eliminated in v0.3 after v0.2 priming was identified as a contamination class). Roster-selection rationale is documented in repo/papers/CHANGELOG.md, deliberately kept out of this runtime data file. Inclusion criteria (all required): (a) deceased; (b) major-language secondary biography or scholarly monograph available in English translation as of 2025; (c) at least one major historiographic interpretation in print since 2000; (d) not currently the subject of active legal-status or political-rehabilitation contestation that would make scholarship politically labile. Criterion (d) is why Khomeini (deceased) and the Kim dynasty (some deceased) are excluded — the scholarship is shaped by ongoing regime survival in ways that distinguish it from Stalin/Mao-class settled-scholarship cases. Justin Trudeau, Aung San Suu Kyi, Modi, anyone still in office: excluded by (a). Cromwell-era (1599-1658) is the operational lower edge of post-printing-press source density; figures pre-1500 (Augustus, Caesar, Marcus Aurelius, Saladin) are tagged 'thin' to flag the source-density tier. Primed v0.2 + neutral v0.4 figure files archived for direct numerical comparison.",
+  "figures": [
+    {
+      "id": "cromwell",
+      "name": "Oliver Cromwell",
+      "era": "17th century England",
+      "lifespan": "1599–1658",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Antonia Fraser, *Cromwell* (1973)",
+        "Christopher Hill, *God's Englishman: Oliver Cromwell and the English Revolution* (1970)",
+        "John Morrill, *Oliver Cromwell* (Oxford DNB, 2008)"
+      ]
+    },
+    {
+      "id": "robespierre",
+      "name": "Maximilien Robespierre",
+      "era": "French Revolution",
+      "lifespan": "1758–1794",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Ruth Scurr, *Fatal Purity: Robespierre and the French Revolution* (2006)",
+        "Peter McPhee, *Robespierre: A Revolutionary Life* (2012)",
+        "David P. Jordan, *The Revolutionary Career of Maximilien Robespierre* (1985)"
+      ]
+    },
+    {
+      "id": "lincoln",
+      "name": "Abraham Lincoln",
+      "era": "19th century United States",
+      "lifespan": "1809–1865",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "David Herbert Donald, *Lincoln* (1995)",
+        "Doris Kearns Goodwin, *Team of Rivals: The Political Genius of Abraham Lincoln* (2005)",
+        "Eric Foner, *The Fiery Trial: Abraham Lincoln and American Slavery* (2010)",
+        "James M. McPherson, *Battle Cry of Freedom* (1988)"
+      ]
+    },
+    {
+      "id": "lbj",
+      "name": "Lyndon B. Johnson",
+      "era": "20th century United States",
+      "lifespan": "1908–1973",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Robert A. Caro, *The Years of Lyndon Johnson* (4 vols., 1982–2012)",
+        "Robert Dallek, *Lone Star Rising: Lyndon Johnson and His Times* (1991, 1998)",
+        "Doris Kearns Goodwin, *Lyndon Johnson and the American Dream* (1976)"
+      ]
+    },
+    {
+      "id": "bismarck",
+      "name": "Otto von Bismarck",
+      "era": "19th century Germany / Prussia",
+      "lifespan": "1815–1898",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Otto Pflanze, *Bismarck and the Development of Germany* (3 vols., 1990)",
+        "Jonathan Steinberg, *Bismarck: A Life* (2011)",
+        "Lothar Gall, *Bismarck: The White Revolutionary* (1986)",
+        "A.J.P. Taylor, *Bismarck: The Man and the Statesman* (1955)"
+      ]
+    },
+    {
+      "id": "thatcher",
+      "name": "Margaret Thatcher",
+      "era": "20th century United Kingdom",
+      "lifespan": "1925–2013",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Charles Moore, *Margaret Thatcher: The Authorized Biography* (3 vols., 2013–2019)",
+        "John Campbell, *Margaret Thatcher: The Grocer's Daughter / The Iron Lady* (2 vols., 2000–2003)",
+        "Hugo Young, *One of Us: A Biography of Margaret Thatcher* (1989, rev. 1993)"
+      ]
+    },
+    {
+      "id": "catherine_the_great",
+      "name": "Catherine the Great",
+      "era": "18th century Russia",
+      "lifespan": "1729–1796",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Isabel de Madariaga, *Russia in the Age of Catherine the Great* (1981)",
+        "Simon Dixon, *Catherine the Great* (Profiles in Power series, 2001)",
+        "Robert K. Massie, *Catherine the Great: Portrait of a Woman* (2011)"
+      ]
+    },
+    {
+      "id": "mao_zedong",
+      "name": "Mao Zedong",
+      "era": "20th century China",
+      "lifespan": "1893–1976",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Jonathan D. Spence, *Mao Zedong* (1999)",
+        "Philip Short, *Mao: A Life* (1999, rev. 2004)",
+        "Frank Dikötter, *Mao's Great Famine* (2010)",
+        "Roderick MacFarquhar & Michael Schoenhals, *Mao's Last Revolution* (2006)"
+      ]
+    },
+    {
+      "id": "augustus",
+      "name": "Augustus Caesar (Octavian)",
+      "era": "Roman Republic / early Roman Empire",
+      "lifespan": "63 BCE – 14 CE",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Anthony Everitt, *Augustus: The Life of Rome's First Emperor* (2006)",
+        "Adrian Goldsworthy, *Augustus: First Emperor of Rome* (2014)",
+        "Ronald Syme, *The Roman Revolution* (1939)",
+        "Werner Eck, *The Age of Augustus* (2003)"
+      ]
+    },
+    {
+      "id": "napoleon",
+      "name": "Napoleon Bonaparte",
+      "era": "Revolutionary and Napoleonic France",
+      "lifespan": "1769–1821",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Andrew Roberts, *Napoleon: A Life* (2014)",
+        "Philip Dwyer, *Napoleon: The Path to Power* (2007) and *Citizen Emperor* (2013)",
+        "Steven Englund, *Napoleon: A Political Life* (2004)",
+        "David A. Bell, *Napoleon: A Concise Biography* (2015)"
+      ]
+    },
+    {
+      "id": "stalin",
+      "name": "Joseph Stalin",
+      "era": "20th century Soviet Union",
+      "lifespan": "1878–1953",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Stephen Kotkin, *Stalin* (2 vols. published 2014, 2017; *Paradoxes of Power* and *Waiting for Hitler*)",
+        "Robert Service, *Stalin: A Biography* (2004)",
+        "Simon Sebag Montefiore, *Stalin: The Court of the Red Tsar* (2003)",
+        "Oleg V. Khlevniuk, *Stalin: New Biography of a Dictator* (2015)"
+      ]
+    },
+    {
+      "id": "gandhi",
+      "name": "Mohandas K. Gandhi",
+      "era": "Late colonial and early independent India",
+      "lifespan": "1869–1948",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Ramachandra Guha, *Gandhi Before India* (2013) and *Gandhi: The Years That Changed the World* (2018)",
+        "Judith M. Brown, *Gandhi: Prisoner of Hope* (1989)",
+        "Joseph Lelyveld, *Great Soul: Mahatma Gandhi and His Struggle with India* (2011)",
+        "Louis Fischer, *The Life of Mahatma Gandhi* (1950)"
+      ]
+    },
+    {
+      "id": "mandela",
+      "name": "Nelson Mandela",
+      "era": "20th century South Africa",
+      "lifespan": "1918–2013",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Nelson Mandela, *Long Walk to Freedom* (1994)",
+        "Anthony Sampson, *Mandela: The Authorised Biography* (1999)",
+        "Stephen Ellis, *External Mission: The ANC in Exile* (2012)",
+        "Tom Lodge, *Mandela: A Critical Life* (2006)"
+      ]
+    },
+    {
+      "id": "mugabe",
+      "name": "Robert Mugabe",
+      "era": "20th–21st century Zimbabwe",
+      "lifespan": "1924–2019",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Martin Meredith, *Mugabe: Power, Plunder, and the Struggle for Zimbabwe* (2002)",
+        "Heidi Holland, *Dinner with Mugabe* (2008)",
+        "Stephen Chan, *Robert Mugabe: A Life of Power and Violence* (2003)",
+        "Andrew Norman, *Robert Mugabe and the Betrayal of Zimbabwe* (2004)"
+      ]
+    },
+    {
+      "id": "sankara",
+      "name": "Thomas Sankara",
+      "era": "20th century Burkina Faso",
+      "lifespan": "1949–1987",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Ernest Harsch, *Thomas Sankara: An African Revolutionary* (2014)",
+        "Bruno Jaffré, *Biographie de Thomas Sankara* (2007)",
+        "Thomas Sankara, *Thomas Sankara Speaks* (Pathfinder Press, 1988)"
+      ]
+    },
+    {
+      "id": "selassie",
+      "name": "Haile Selassie",
+      "era": "20th century Ethiopia",
+      "lifespan": "1892–1975",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Harold G. Marcus, *Haile Selassie I: The Formative Years 1892–1936* (1987)",
+        "Bahru Zewde, *A History of Modern Ethiopia 1855–1991* (2001)",
+        "Ryszard Kapuściński, *The Emperor: Downfall of an Autocrat* (1978)",
+        "Asfa-Wossen Asserate, *King of Kings: The Triumph and Tragedy of Emperor Haile Selassie I of Ethiopia* (2015)"
+      ]
+    },
+    {
+      "id": "nkrumah",
+      "name": "Kwame Nkrumah",
+      "era": "20th century Ghana",
+      "lifespan": "1909–1972",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "David Rooney, *Kwame Nkrumah: Vision and Tragedy* (2007)",
+        "June Milne, *Kwame Nkrumah: A Biography* (2000)",
+        "Kwame Nkrumah, *Ghana: The Autobiography of Kwame Nkrumah* (1957)",
+        "Basil Davidson, *Black Star: A View of the Life and Times of Kwame Nkrumah* (1973)"
+      ]
+    },
+    {
+      "id": "lumumba",
+      "name": "Patrice Lumumba",
+      "era": "Mid-20th century Congo (DRC)",
+      "lifespan": "1925–1961",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Ludo De Witte, *The Assassination of Lumumba* (2001)",
+        "Georges Nzongola-Ntalaja, *Patrice Lumumba* (2014)",
+        "Leo Zeilig, *Lumumba: Africa's Lost Leader* (2008)"
+      ]
+    },
+    {
+      "id": "ataturk",
+      "name": "Mustafa Kemal Atatürk",
+      "era": "Late Ottoman / Republic of Turkey",
+      "lifespan": "1881–1938",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Andrew Mango, *Atatürk: The Biography of the Founder of Modern Turkey* (1999)",
+        "M. Şükrü Hanioğlu, *Atatürk: An Intellectual Biography* (2011)",
+        "Patrick Balfour, Lord Kinross, *Atatürk: A Biography of Mustafa Kemal* (1964)"
+      ]
+    },
+    {
+      "id": "saladin",
+      "name": "Saladin (Salah ad-Din Yusuf ibn Ayyub)",
+      "era": "Medieval Islamic / Ayyubid Sultanate",
+      "lifespan": "1137–1193",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Anne-Marie Eddé, *Saladin* (Harvard, 2011)",
+        "Malcolm Cameron Lyons & D.E.P. Jackson, *Saladin: The Politics of the Holy War* (1982)",
+        "Bahā al-Dīn ibn Shaddād, *al-Nawādir al-Sultaniyya* (12th c. primary biography, multiple translations)",
+        "Jonathan Phillips, *The Life and Legend of the Sultan Saladin* (2019)"
+      ]
+    },
+    {
+      "id": "suleiman_the_magnificent",
+      "name": "Suleiman the Magnificent",
+      "era": "Ottoman Empire",
+      "lifespan": "1494–1566",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Caroline Finkel, *Osman's Dream: The History of the Ottoman Empire* (2005)",
+        "Roger Bigelow Merriman, *Suleiman the Magnificent 1520–1566* (1944)",
+        "André Clot, *Suleiman the Magnificent* (1989, English 1992)",
+        "Halil İnalcık, *The Ottoman Empire: The Classical Age 1300–1600* (1973)"
+      ]
+    },
+    {
+      "id": "nasser",
+      "name": "Gamal Abdel Nasser",
+      "era": "20th century Egypt",
+      "lifespan": "1918–1970",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Said K. Aburish, *Nasser: The Last Arab* (2004)",
+        "Anne Alexander, *Nasser* (2005)",
+        "Joel Gordon, *Nasser's Blessed Movement* (1992)",
+        "Robert Stephens, *Nasser: A Political Biography* (1971)"
+      ]
+    },
+    {
+      "id": "ben_gurion",
+      "name": "David Ben-Gurion",
+      "era": "20th century Israel / Pre-state Yishuv",
+      "lifespan": "1886–1973",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Anita Shapira, *Ben-Gurion: Father of Modern Israel* (2014)",
+        "Tom Segev, *A State at Any Cost: The Life of David Ben-Gurion* (2018)",
+        "Shabtai Teveth, *Ben-Gurion: The Burning Ground 1886–1948* (1987)",
+        "Michael Bar-Zohar, *Ben-Gurion: A Biography* (1978)"
+      ]
+    },
+    {
+      "id": "hirohito",
+      "name": "Hirohito (Emperor Shōwa)",
+      "era": "20th century Japan",
+      "lifespan": "1901–1989",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Herbert P. Bix, *Hirohito and the Making of Modern Japan* (2000)",
+        "Edward Behr, *Hirohito: Behind the Myth* (1989)",
+        "Stephen S. Large, *Emperor Hirohito and Shōwa Japan: A Political Biography* (1992)",
+        "John W. Dower, *Embracing Defeat: Japan in the Wake of World War II* (1999)"
+      ]
+    },
+    {
+      "id": "akbar",
+      "name": "Akbar the Great",
+      "era": "Mughal India",
+      "lifespan": "1542–1605",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Abu'l-Fazl ibn Mubarak, *Akbarnama* (court chronicle, late 16th c.; multiple translations including Beveridge 1907)",
+        "John F. Richards, *The Mughal Empire* (Cambridge, 1993)",
+        "Ira Mukhoty, *Akbar: The Great Mughal* (2020)",
+        "Audrey Truschke, *Culture of Encounters: Sanskrit at the Mughal Court* (2016)"
+      ]
+    },
+    {
+      "id": "nehru",
+      "name": "Jawaharlal Nehru",
+      "era": "20th century India",
+      "lifespan": "1889–1964",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Sarvepalli Gopal, *Jawaharlal Nehru: A Biography* (3 vols., 1975–1984)",
+        "Judith M. Brown, *Nehru: A Political Life* (2003)",
+        "Benjamin Zachariah, *Nehru* (Routledge Historical Biographies, 2004)",
+        "Jawaharlal Nehru, *The Discovery of India* (1946)"
+      ]
+    },
+    {
+      "id": "sukarno",
+      "name": "Sukarno",
+      "era": "20th century Indonesia",
+      "lifespan": "1901–1970",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "John D. Legge, *Sukarno: A Political Biography* (3rd ed. 2003)",
+        "J. D. Legge, *Sukarno: A Political Biography* (1972)",
+        "Bernhard Dahm, *Sukarno and the Struggle for Indonesian Independence* (1969)",
+        "Cindy Adams (with Sukarno), *Sukarno: An Autobiography* (1965)"
+      ]
+    },
+    {
+      "id": "lee_kuan_yew",
+      "name": "Lee Kuan Yew",
+      "era": "20th century Singapore",
+      "lifespan": "1923–2015",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Lee Kuan Yew, *The Singapore Story* (1998) and *From Third World to First* (2000)",
+        "Michael D. Barr, *Lee Kuan Yew: The Beliefs Behind the Man* (2000)",
+        "Tom Plate, *Conversations with Lee Kuan Yew* (2010)",
+        "Cherian George, *Singapore: The Air-Conditioned Nation* (2000)"
+      ]
+    },
+    {
+      "id": "bolivar",
+      "name": "Simón Bolívar",
+      "era": "Spanish American independence wars",
+      "lifespan": "1783–1830",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "John Lynch, *Simón Bolívar: A Life* (2006)",
+        "David Bushnell (ed.), *El Libertador: Writings of Simón Bolívar* (2003)",
+        "Gerhard Masur, *Simón Bolívar* (rev. ed. 1969)",
+        "Marie Arana, *Bolívar: American Liberator* (2013)"
+      ]
+    },
+    {
+      "id": "peron",
+      "name": "Juan Domingo Perón",
+      "era": "20th century Argentina",
+      "lifespan": "1895–1974",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Joseph A. Page, *Perón: A Biography* (1983)",
+        "Robert D. Crassweller, *Perón and the Enigmas of Argentina* (1987)",
+        "Daniel James, *Resistance and Integration: Peronism and the Argentine Working Class 1946–1976* (1988)",
+        "Jill Hedges, *Juan Perón: The Life of the People's Colonel* (2021)"
+      ]
+    },
+    {
+      "id": "pinochet",
+      "name": "Augusto Pinochet",
+      "era": "20th century Chile",
+      "lifespan": "1915–2006",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Mark Ensalaco, *Chile Under Pinochet: Recovering the Truth* (2000)",
+        "Peter Kornbluh, *The Pinochet File* (2003, rev. 2013)",
+        "Pamela Constable & Arturo Valenzuela, *A Nation of Enemies: Chile under Pinochet* (1991)",
+        "Genaro Arriagada, *Pinochet: The Politics of Power* (1988)"
+      ]
+    },
+    {
+      "id": "allende",
+      "name": "Salvador Allende",
+      "era": "20th century Chile",
+      "lifespan": "1908–1973",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Peter Winn, *Weavers of Revolution: The Yarur Workers and Chile's Road to Socialism* (1986)",
+        "Edward Boorstein, *Allende's Chile: An Inside View* (1977)",
+        "Joan E. Garcés, *Allende y la experiencia chilena* (1976)",
+        "Tanya Harmer, *Allende's Chile and the Inter-American Cold War* (2011)"
+      ]
+    },
+    {
+      "id": "mussolini",
+      "name": "Benito Mussolini",
+      "era": "20th century Italy",
+      "lifespan": "1883–1945",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "R.J.B. Bosworth, *Mussolini* (2002, rev. 2010)",
+        "Christopher Hibbert, *Benito Mussolini: A Biography* (1962)",
+        "Denis Mack Smith, *Mussolini* (1981)",
+        "Paul Corner, *The Fascist Party and Popular Opinion in Mussolini's Italy* (2012)"
+      ]
+    },
+    {
+      "id": "franco",
+      "name": "Francisco Franco",
+      "era": "20th century Spain",
+      "lifespan": "1892–1975",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Paul Preston, *Franco: A Biography* (1993)",
+        "Stanley G. Payne, *The Franco Regime 1936–1975* (1987)",
+        "Enrique Moradiellos, *Franco: Anatomy of a Dictator* (2018)",
+        "Nigel Townson (ed.), *Spain Transformed: The Franco Dictatorship 1959–1975* (2007)"
+      ]
+    },
+    {
+      "id": "tito",
+      "name": "Josip Broz Tito",
+      "era": "20th century Yugoslavia",
+      "lifespan": "1892–1980",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Jasper Ridley, *Tito: A Biography* (1994)",
+        "Geoffrey Swain, *Tito: A Biography* (2011)",
+        "Stevan K. Pavlowitch, *Tito: Yugoslavia's Great Dictator* (1992)",
+        "Richard West, *Tito and the Rise and Fall of Yugoslavia* (1995)"
+      ]
+    },
+    {
+      "id": "de_gaulle",
+      "name": "Charles de Gaulle",
+      "era": "20th century France",
+      "lifespan": "1890–1970",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Julian Jackson, *A Certain Idea of France: The Life of Charles de Gaulle* (2018)",
+        "Jean Lacouture, *De Gaulle* (3 vols., 1984–1986)",
+        "Sudhir Hazareesingh, *In the Shadow of the General: Modern France and the Myth of De Gaulle* (2012)",
+        "Charles Williams, *The Last Great Frenchman: A Life of General de Gaulle* (1993)"
+      ]
+    },
+    {
+      "id": "churchill",
+      "name": "Winston Churchill",
+      "era": "20th century United Kingdom",
+      "lifespan": "1874–1965",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Roy Jenkins, *Churchill: A Biography* (2001)",
+        "Andrew Roberts, *Churchill: Walking with Destiny* (2018)",
+        "Martin Gilbert, *Winston S. Churchill* (8 vols., official biography, 1966–1988)",
+        "Richard Toye, *Churchill's Empire: The World That Made Him and the World He Made* (2010)"
+      ]
+    },
+    {
+      "id": "frederick_the_great",
+      "name": "Frederick the Great (Frederick II of Prussia)",
+      "era": "18th century Prussia",
+      "lifespan": "1712–1786",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Tim Blanning, *Frederick the Great: King of Prussia* (2015)",
+        "Christopher Clark, *Iron Kingdom: The Rise and Downfall of Prussia 1600–1947* (2006)",
+        "Theodor Schieder, *Frederick the Great* (English 2000)",
+        "Dennis Showalter, *Frederick the Great: A Military History* (2012)"
+      ]
+    },
+    {
+      "id": "henry_viii",
+      "name": "Henry VIII",
+      "era": "Tudor England",
+      "lifespan": "1491–1547",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "J.J. Scarisbrick, *Henry VIII* (1968)",
+        "David Starkey, *Henry: Virtuous Prince* (2008) and *Henry: Model of a Tyrant* (2012)",
+        "Eric Ives, *The Life and Death of Anne Boleyn* (2004)",
+        "G.W. Bernard, *The King's Reformation* (2005)"
+      ]
+    },
+    {
+      "id": "louis_xiv",
+      "name": "Louis XIV",
+      "era": "17th–18th century France",
+      "lifespan": "1638–1715",
+      "evidence_density": "medium",
+      "source_anchors": [
+        "Anthony Levi, *Louis XIV* (2004)",
+        "Philippe Erlanger, *Louis XIV* (1965, English 1970)",
+        "John B. Wolf, *Louis XIV* (1968)",
+        "Peter Burke, *The Fabrication of Louis XIV* (1992)"
+      ]
+    },
+    {
+      "id": "julius_caesar",
+      "name": "Gaius Julius Caesar",
+      "era": "Late Roman Republic",
+      "lifespan": "100–44 BCE",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Adrian Goldsworthy, *Caesar: Life of a Colossus* (2006)",
+        "Ronald Syme, *The Roman Revolution* (1939)",
+        "Christian Meier, *Caesar: A Biography* (1982, English 1995)",
+        "Caesar's own *Commentarii de Bello Gallico* and *Commentarii de Bello Civili* (primary)"
+      ]
+    },
+    {
+      "id": "marcus_aurelius",
+      "name": "Marcus Aurelius",
+      "era": "Roman Empire (Antonine period)",
+      "lifespan": "121–180 CE",
+      "evidence_density": "thin",
+      "source_anchors": [
+        "Frank McLynn, *Marcus Aurelius: A Life* (2009)",
+        "Anthony R. Birley, *Marcus Aurelius: A Biography* (rev. ed. 1987)",
+        "Marcus Aurelius, *Meditations* (primary, multiple translations)",
+        "Pierre Hadot, *The Inner Citadel: The Meditations of Marcus Aurelius* (1998)"
+      ]
+    },
+    {
+      "id": "pierre_trudeau",
+      "name": "Pierre Elliott Trudeau",
+      "era": "20th century Canada",
+      "lifespan": "1919–2000",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "John English, *Citizen of the World: The Life of Pierre Elliott Trudeau, Volume One: 1919–1968* (2006) and *Just Watch Me: The Life of Pierre Elliott Trudeau, Volume Two: 1968–2000* (2009)",
+        "Stephen Clarkson & Christina McCall, *Trudeau and Our Times* (2 vols., 1990, 1994)",
+        "Max Nemni & Monique Nemni, *Young Trudeau: 1919–1944* (2006) and *Trudeau Transformed: The Shaping of a Statesman 1944–1965* (2011)",
+        "Pierre Elliott Trudeau, *Memoirs* (1993)"
+      ]
+    },
+    {
+      "id": "theodore_roosevelt",
+      "name": "Theodore Roosevelt",
+      "era": "Late 19th–early 20th century United States",
+      "lifespan": "1858–1919",
+      "evidence_density": "dense",
+      "source_anchors": [
+        "Edmund Morris, *The Rise of Theodore Roosevelt* (1979), *Theodore Rex* (2001), *Colonel Roosevelt* (2010)",
+        "Doris Kearns Goodwin, *The Bully Pulpit: Theodore Roosevelt, William Howard Taft, and the Golden Age of Journalism* (2013)",
+        "H.W. Brands, *T.R.: The Last Romantic* (1997)",
+        "Kathleen Dalton, *Theodore Roosevelt: A Strenuous Life* (2002)"
+      ]
+    }
+  ]
+}

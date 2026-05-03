@@ -1,0 +1,4478 @@
+{
+  "run_id": "20260501T124315Z",
+  "run_version": "0.3",
+  "prompt_version": "v1",
+  "temperature": 0.2,
+  "date": "2026-05-01",
+  "n_cells": 3872,
+  "n_models": 11,
+  "n_figures": 44,
+  "n_axes": 4,
+  "models": [
+    "anthropic/claude-opus-4.7",
+    "deepseek/deepseek-v4-pro",
+    "google/gemini-3.1-pro-preview",
+    "meta-llama/llama-4-maverick",
+    "minimax/minimax-m2.7",
+    "mistralai/mistral-large-2512",
+    "moonshotai/kimi-k2.6",
+    "openai/gpt-5.5",
+    "qwen/qwen3.6-max-preview",
+    "x-ai/grok-4.20",
+    "z-ai/glm-5.1"
+  ],
+  "figures": [
+    "akbar",
+    "allende",
+    "ataturk",
+    "augustus",
+    "ben_gurion",
+    "bismarck",
+    "bolivar",
+    "catherine_the_great",
+    "churchill",
+    "cromwell",
+    "de_gaulle",
+    "franco",
+    "frederick_the_great",
+    "gandhi",
+    "henry_viii",
+    "hirohito",
+    "julius_caesar",
+    "lbj",
+    "lee_kuan_yew",
+    "lincoln",
+    "louis_xiv",
+    "lumumba",
+    "mandela",
+    "mao_zedong",
+    "marcus_aurelius",
+    "mugabe",
+    "mussolini",
+    "napoleon",
+    "nasser",
+    "nehru",
+    "nkrumah",
+    "peron",
+    "pierre_trudeau",
+    "pinochet",
+    "robespierre",
+    "saladin",
+    "sankara",
+    "selassie",
+    "stalin",
+    "sukarno",
+    "suleiman_the_magnificent",
+    "thatcher",
+    "theodore_roosevelt",
+    "tito"
+  ],
+  "axes": [
+    "honor",
+    "hypocrisy",
+    "integrity",
+    "opportunism"
+  ],
+  "matrix": {
+    "anthropic/claude-opus-4.7": {
+      "akbar": {
+        "hypocrisy": 4,
+        "honor": 7,
+        "opportunism": 5,
+        "integrity": 7
+      },
+      "allende": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 3,
+        "integrity": 7.5
+      },
+      "ataturk": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "augustus": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "ben_gurion": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 5
+      },
+      "bismarck": {
+        "hypocrisy": 8,
+        "honor": 5.5,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "bolivar": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 6,
+        "integrity": 5
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8.5,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "churchill": {
+        "hypocrisy": 7,
+        "honor": 6.5,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "cromwell": {
+        "honor": 5,
+        "hypocrisy": 7,
+        "opportunism": 5.5,
+        "integrity": 8
+      },
+      "de_gaulle": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "franco": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "frederick_the_great": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "gandhi": {
+        "hypocrisy": 5,
+        "honor": 9,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 2.5,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "hirohito": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 7.5,
+        "integrity": 4
+      },
+      "julius_caesar": {
+        "hypocrisy": 7,
+        "honor": 6.5,
+        "opportunism": 6,
+        "integrity": 5
+      },
+      "lbj": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 6.5,
+        "honor": 5,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "lincoln": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 5,
+        "integrity": 7.5
+      },
+      "louis_xiv": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 6,
+        "integrity": 6
+      },
+      "lumumba": {
+        "hypocrisy": 3,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "mandela": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "mao_zedong": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 7.5,
+        "integrity": 4
+      },
+      "mussolini": {
+        "honor": 2,
+        "opportunism": 10,
+        "integrity": 2,
+        "hypocrisy": 9
+      },
+      "napoleon": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 6,
+        "integrity": 6
+      },
+      "nehru": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 7.5
+      },
+      "nkrumah": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 3,
+        "integrity": 6
+      },
+      "peron": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 4,
+        "integrity": 7
+      },
+      "pinochet": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 7,
+        "integrity": 3
+      },
+      "robespierre": {
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "saladin": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 4.5,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 2,
+        "honor": 6,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "selassie": {
+        "hypocrisy": 8,
+        "honor": 7,
+        "opportunism": 5.5,
+        "integrity": 4
+      },
+      "stalin": {
+        "hypocrisy": 10,
+        "honor": 1,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "sukarno": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 7,
+        "integrity": 5
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "thatcher": {
+        "hypocrisy": 5,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "tito": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 7,
+        "integrity": 4
+      }
+    },
+    "deepseek/deepseek-v4-pro": {
+      "akbar": {
+        "hypocrisy": 2.5,
+        "honor": 6.5,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "allende": {
+        "hypocrisy": 3,
+        "integrity": 9,
+        "honor": 8.5,
+        "opportunism": 2
+      },
+      "ataturk": {
+        "hypocrisy": 5.5,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 7.5
+      },
+      "augustus": {
+        "hypocrisy": 9,
+        "honor": 4,
+        "integrity": 3.5,
+        "opportunism": 9
+      },
+      "ben_gurion": {
+        "hypocrisy": 6.5,
+        "honor": 4.5,
+        "integrity": 7,
+        "opportunism": 3
+      },
+      "bismarck": {
+        "honor": 4,
+        "integrity": 2.5,
+        "hypocrisy": 3.5,
+        "opportunism": 9
+      },
+      "bolivar": {
+        "hypocrisy": 7,
+        "honor": 4.5,
+        "integrity": 7,
+        "opportunism": 6
+      },
+      "catherine_the_great": {
+        "hypocrisy": 9,
+        "opportunism": 7.5,
+        "honor": 2.5,
+        "integrity": 4
+      },
+      "churchill": {
+        "honor": 5.5,
+        "hypocrisy": 7,
+        "opportunism": 6.5,
+        "integrity": 6
+      },
+      "cromwell": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "integrity": 7,
+        "opportunism": 6
+      },
+      "de_gaulle": {
+        "opportunism": 2,
+        "honor": 8,
+        "hypocrisy": 6,
+        "integrity": 7
+      },
+      "franco": {
+        "honor": 1.5,
+        "hypocrisy": 7,
+        "opportunism": 8,
+        "integrity": 7.5
+      },
+      "frederick_the_great": {
+        "hypocrisy": 8,
+        "opportunism": 8.5,
+        "honor": 3,
+        "integrity": 2.5
+      },
+      "gandhi": {
+        "honor": 9,
+        "hypocrisy": 7,
+        "opportunism": 2.5,
+        "integrity": 9.5
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 1.5,
+        "opportunism": 9,
+        "integrity": 2.5
+      },
+      "hirohito": {
+        "hypocrisy": 7.5,
+        "honor": 2,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "julius_caesar": {
+        "honor": 3.5,
+        "opportunism": 7.5,
+        "hypocrisy": 7.5,
+        "integrity": 3.5
+      },
+      "lbj": {
+        "honor": 3.5,
+        "hypocrisy": 8,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "honor": 3,
+        "opportunism": 7,
+        "hypocrisy": 4.5,
+        "integrity": 9
+      },
+      "lincoln": {
+        "honor": 8,
+        "hypocrisy": 5.5,
+        "opportunism": 2.5,
+        "integrity": 9
+      },
+      "louis_xiv": {
+        "hypocrisy": 6.5,
+        "honor": 2.5,
+        "opportunism": 2,
+        "integrity": 6
+      },
+      "lumumba": {
+        "hypocrisy": 2,
+        "opportunism": 2,
+        "integrity": 9,
+        "honor": 4.5
+      },
+      "mandela": {
+        "hypocrisy": 1.5,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 9.5,
+        "opportunism": 7.5,
+        "integrity": 3,
+        "honor": 1
+      },
+      "marcus_aurelius": {
+        "opportunism": 1,
+        "integrity": 9.5,
+        "hypocrisy": 2.5,
+        "honor": 9
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "opportunism": 8,
+        "integrity": 2
+      },
+      "mussolini": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "napoleon": {
+        "hypocrisy": 8.5,
+        "honor": 2.5,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "nasser": {
+        "hypocrisy": 7.5,
+        "opportunism": 5,
+        "integrity": 7.5,
+        "honor": 3.5
+      },
+      "nehru": {
+        "hypocrisy": 6.5,
+        "honor": 7.5,
+        "opportunism": 3,
+        "integrity": 7.5
+      },
+      "nkrumah": {
+        "hypocrisy": 7.5,
+        "honor": 2.5,
+        "opportunism": 6.5,
+        "integrity": 7.5
+      },
+      "peron": {
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 7.5,
+        "honor": 5.5,
+        "opportunism": 5,
+        "integrity": 8.5
+      },
+      "pinochet": {
+        "honor": 1,
+        "hypocrisy": 9,
+        "integrity": 2.5,
+        "opportunism": 8
+      },
+      "robespierre": {
+        "hypocrisy": 7.5,
+        "honor": 2,
+        "opportunism": 1,
+        "integrity": 9.5
+      },
+      "saladin": {
+        "hypocrisy": 1.5,
+        "honor": 9,
+        "integrity": 9,
+        "opportunism": 5
+      },
+      "sankara": {
+        "hypocrisy": 3,
+        "integrity": 9,
+        "honor": 7.5,
+        "opportunism": 1
+      },
+      "selassie": {
+        "hypocrisy": 8.5,
+        "integrity": 3,
+        "opportunism": 7,
+        "honor": 8
+      },
+      "stalin": {
+        "hypocrisy": 9.5,
+        "opportunism": 9,
+        "honor": 1,
+        "integrity": 1.5
+      },
+      "sukarno": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 5,
+        "opportunism": 5,
+        "honor": 6,
+        "integrity": 7
+      },
+      "thatcher": {
+        "opportunism": 2,
+        "honor": 6,
+        "hypocrisy": 7,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 7,
+        "integrity": 8.5,
+        "honor": 6,
+        "opportunism": 6
+      },
+      "tito": {
+        "hypocrisy": 7.5,
+        "integrity": 5.5,
+        "honor": 2.5,
+        "opportunism": 5.5
+      }
+    },
+    "google/gemini-3.1-pro-preview": {
+      "akbar": {
+        "hypocrisy": 4,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "allende": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "ataturk": {
+        "hypocrisy": 7,
+        "honor": 6.5,
+        "opportunism": 6.5,
+        "integrity": 6
+      },
+      "augustus": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "ben_gurion": {
+        "hypocrisy": 6,
+        "honor": 5,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "bismarck": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "bolivar": {
+        "hypocrisy": 7,
+        "honor": 3.5,
+        "opportunism": 6.5,
+        "integrity": 6
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 3.5
+      },
+      "churchill": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "cromwell": {
+        "honor": 4,
+        "hypocrisy": 8,
+        "opportunism": 7,
+        "integrity": 7.5
+      },
+      "de_gaulle": {
+        "hypocrisy": 6.5,
+        "opportunism": 4,
+        "integrity": 7,
+        "honor": 5.5
+      },
+      "franco": {
+        "hypocrisy": 7,
+        "honor": 2,
+        "opportunism": 8.5,
+        "integrity": 3.5
+      },
+      "frederick_the_great": {
+        "hypocrisy": 8.5,
+        "honor": 3,
+        "opportunism": 8.5,
+        "integrity": 4
+      },
+      "gandhi": {
+        "hypocrisy": 4.5,
+        "honor": 9,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3.5
+      },
+      "hirohito": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 7,
+        "integrity": 3.5
+      },
+      "julius_caesar": {
+        "hypocrisy": 8,
+        "honor": 4.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "lbj": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 5,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "lincoln": {
+        "hypocrisy": 4.5,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 7.5
+      },
+      "louis_xiv": {
+        "hypocrisy": 6.5,
+        "honor": 3,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "lumumba": {
+        "hypocrisy": 3,
+        "honor": 6,
+        "opportunism": 3,
+        "integrity": 8.5
+      },
+      "mandela": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 2.5,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 2.5
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "mussolini": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9.5,
+        "integrity": 2.5
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 5
+      },
+      "nehru": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 7.5,
+        "honor": 4,
+        "opportunism": 3,
+        "integrity": 6.5
+      },
+      "peron": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 4,
+        "integrity": 7.5
+      },
+      "pinochet": {
+        "hypocrisy": 8.5,
+        "honor": 1.5,
+        "opportunism": 8,
+        "integrity": 2
+      },
+      "robespierre": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "saladin": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 3.5,
+        "honor": 7,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "selassie": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 5.5
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "sukarno": {
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 6,
+        "honor": 6.5,
+        "opportunism": 6.5,
+        "integrity": 6.5
+      },
+      "thatcher": {
+        "hypocrisy": 4,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "tito": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 5
+      }
+    },
+    "meta-llama/llama-4-maverick": {
+      "akbar": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "allende": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "ataturk": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "augustus": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 8,
+        "integrity": 8
+      },
+      "ben_gurion": {
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8,
+        "hypocrisy": 4
+      },
+      "bismarck": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 8,
+        "integrity": 8
+      },
+      "bolivar": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "integrity": 8
+      },
+      "catherine_the_great": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 8
+      },
+      "churchill": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "cromwell": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "de_gaulle": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "franco": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "frederick_the_great": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "gandhi": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "henry_viii": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "hirohito": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "julius_caesar": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "lbj": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 4,
+        "opportunism": 4,
+        "honor": 8,
+        "integrity": 8
+      },
+      "lincoln": {
+        "hypocrisy": 4,
+        "honor": 9,
+        "opportunism": 4,
+        "integrity": 9
+      },
+      "louis_xiv": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 6
+      },
+      "lumumba": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "mandela": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 2.5,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 8,
+        "honor": 1.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "mussolini": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "nasser": {
+        "hypocrisy": 6,
+        "opportunism": 8,
+        "integrity": 8,
+        "honor": 6
+      },
+      "nehru": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "peron": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 5
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "pinochet": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "robespierre": {
+        "hypocrisy": 6,
+        "honor": 4,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "saladin": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 1,
+        "integrity": 9
+      },
+      "selassie": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "stalin": {
+        "hypocrisy": 8,
+        "honor": 1,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "sukarno": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "thatcher": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "tito": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 6
+      }
+    },
+    "minimax/minimax-m2.7": {
+      "akbar": {
+        "honor": 7,
+        "opportunism": 6,
+        "hypocrisy": 6
+      },
+      "allende": {
+        "honor": 7,
+        "hypocrisy": 6.5,
+        "integrity": 8,
+        "opportunism": 5
+      },
+      "ataturk": {
+        "honor": 6.5,
+        "hypocrisy": 6.5,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "augustus": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 8.5,
+        "integrity": 8
+      },
+      "ben_gurion": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "integrity": 7,
+        "opportunism": 8
+      },
+      "bismarck": {
+        "honor": 5,
+        "hypocrisy": 7.5,
+        "opportunism": 7.5
+      },
+      "bolivar": {
+        "hypocrisy": 7.5,
+        "honor": 5.5,
+        "integrity": 6,
+        "opportunism": 8
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "integrity": 4,
+        "opportunism": 8
+      },
+      "churchill": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "cromwell": {
+        "hypocrisy": 8.5,
+        "integrity": 6.5,
+        "opportunism": 8,
+        "honor": 4
+      },
+      "de_gaulle": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "franco": {
+        "honor": 1.5,
+        "opportunism": 8,
+        "hypocrisy": 8,
+        "integrity": 6
+      },
+      "frederick_the_great": {
+        "opportunism": 8,
+        "hypocrisy": 7,
+        "honor": 5.5,
+        "integrity": 5.5
+      },
+      "gandhi": {
+        "honor": 8.5,
+        "integrity": 8,
+        "opportunism": 2
+      },
+      "henry_viii": {
+        "honor": 3,
+        "hypocrisy": 9,
+        "opportunism": 8.5,
+        "integrity": 4.5
+      },
+      "hirohito": {
+        "honor": 2,
+        "opportunism": 7,
+        "hypocrisy": 7.5,
+        "integrity": 5
+      },
+      "julius_caesar": {
+        "hypocrisy": 6.5,
+        "honor": 5,
+        "opportunism": 8.5,
+        "integrity": 5.5
+      },
+      "lbj": {
+        "honor": 4,
+        "integrity": 3,
+        "opportunism": 8,
+        "hypocrisy": 8
+      },
+      "lee_kuan_yew": {
+        "honor": 5,
+        "integrity": 7,
+        "hypocrisy": 7
+      },
+      "lincoln": {
+        "hypocrisy": 5,
+        "integrity": 8,
+        "opportunism": 6.5
+      },
+      "louis_xiv": {
+        "opportunism": 7,
+        "hypocrisy": 8,
+        "integrity": 6
+      },
+      "lumumba": {
+        "integrity": 8,
+        "honor": 7
+      },
+      "mandela": {
+        "honor": 9,
+        "opportunism": 5,
+        "integrity": 8.5,
+        "hypocrisy": 4.5
+      },
+      "mao_zedong": {
+        "integrity": 4,
+        "opportunism": 7
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 5.5,
+        "honor": 8,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8
+      },
+      "mussolini": {
+        "honor": 1.5,
+        "hypocrisy": 8.5,
+        "integrity": 2,
+        "opportunism": 9
+      },
+      "napoleon": {
+        "honor": 4.5,
+        "opportunism": 8.5,
+        "integrity": 4,
+        "hypocrisy": 8
+      },
+      "nasser": {
+        "honor": 4,
+        "hypocrisy": 7,
+        "integrity": 8
+      },
+      "nehru": {
+        "hypocrisy": 6,
+        "opportunism": 7,
+        "honor": 5,
+        "integrity": 7
+      },
+      "nkrumah": {
+        "honor": 4,
+        "hypocrisy": 7,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "peron": {
+        "honor": 4,
+        "opportunism": 7
+      },
+      "pierre_trudeau": {
+        "honor": 7,
+        "hypocrisy": 6,
+        "integrity": 8,
+        "opportunism": 6
+      },
+      "pinochet": {
+        "hypocrisy": 8,
+        "honor": 1.5,
+        "opportunism": 8,
+        "integrity": 2
+      },
+      "robespierre": {
+        "opportunism": 4,
+        "honor": 3,
+        "integrity": 8,
+        "hypocrisy": 9
+      },
+      "saladin": {
+        "honor": 9,
+        "hypocrisy": 4,
+        "opportunism": 6.5,
+        "integrity": 9
+      },
+      "sankara": {
+        "hypocrisy": 5.5,
+        "integrity": 8,
+        "opportunism": 2
+      },
+      "selassie": {
+        "hypocrisy": 8,
+        "integrity": 5,
+        "honor": 6
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "opportunism": 9,
+        "honor": 1.5,
+        "integrity": 3
+      },
+      "sukarno": {
+        "hypocrisy": 7.5,
+        "opportunism": 7.5,
+        "honor": 5
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 6,
+        "integrity": 7.5,
+        "opportunism": 5
+      },
+      "thatcher": {
+        "hypocrisy": 7,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 6,
+        "honor": 5,
+        "integrity": 7,
+        "opportunism": 7.5
+      },
+      "tito": {
+        "honor": 6,
+        "opportunism": 7,
+        "hypocrisy": 8
+      }
+    },
+    "mistralai/mistral-large-2512": {
+      "akbar": {
+        "hypocrisy": 5,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "allende": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4.5,
+        "integrity": 8
+      },
+      "ataturk": {
+        "hypocrisy": 5.5,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "augustus": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 9,
+        "integrity": 4
+      },
+      "ben_gurion": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "bismarck": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 9,
+        "integrity": 6
+      },
+      "bolivar": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "catherine_the_great": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 8,
+        "integrity": 7
+      },
+      "churchill": {
+        "hypocrisy": 7,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "cromwell": {
+        "honor": 6,
+        "hypocrisy": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "de_gaulle": {
+        "hypocrisy": 5,
+        "honor": 8,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "franco": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 4
+      },
+      "frederick_the_great": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "gandhi": {
+        "hypocrisy": 5,
+        "honor": 9,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "hirohito": {
+        "hypocrisy": 8,
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "julius_caesar": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 8,
+        "integrity": 7
+      },
+      "lbj": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 5
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 5,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "lincoln": {
+        "hypocrisy": 4,
+        "honor": 9,
+        "opportunism": 4,
+        "integrity": 9
+      },
+      "louis_xiv": {
+        "hypocrisy": 8,
+        "honor": 6,
+        "opportunism": 8,
+        "integrity": 4.5
+      },
+      "lumumba": {
+        "hypocrisy": 3,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "mandela": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 8.5,
+        "integrity": 4
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 4
+      },
+      "mussolini": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "napoleon": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 9,
+        "integrity": 5
+      },
+      "nasser": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "nehru": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "peron": {
+        "hypocrisy": 7,
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 5
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "pinochet": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "robespierre": {
+        "hypocrisy": 7,
+        "honor": 5,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "saladin": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 6,
+        "integrity": 9
+      },
+      "sankara": {
+        "hypocrisy": 2.5,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "sukarno": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 7.5,
+        "integrity": 6
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "thatcher": {
+        "hypocrisy": 6.5,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 6.5,
+        "integrity": 8
+      },
+      "tito": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 6
+      }
+    },
+    "moonshotai/kimi-k2.6": {
+      "akbar": {
+        "opportunism": 7,
+        "honor": 7.5,
+        "integrity": 6.5,
+        "hypocrisy": 5
+      },
+      "allende": {
+        "honor": 8,
+        "hypocrisy": 4,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "ataturk": {
+        "hypocrisy": 6,
+        "opportunism": 4.5,
+        "integrity": 7.5,
+        "honor": 6
+      },
+      "augustus": {
+        "integrity": 4,
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8
+      },
+      "ben_gurion": {
+        "hypocrisy": 6,
+        "integrity": 7.5,
+        "honor": 6
+      },
+      "bismarck": {
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 3.5,
+        "hypocrisy": 7
+      },
+      "bolivar": {
+        "hypocrisy": 7,
+        "opportunism": 6,
+        "honor": 5.5,
+        "integrity": 5
+      },
+      "catherine_the_great": {
+        "honor": 3.5,
+        "integrity": 5,
+        "hypocrisy": 8,
+        "opportunism": 7
+      },
+      "churchill": {
+        "integrity": 6,
+        "honor": 5.5,
+        "opportunism": 5.5,
+        "hypocrisy": 8
+      },
+      "cromwell": {
+        "hypocrisy": 8,
+        "integrity": 6,
+        "honor": 3.5,
+        "opportunism": 7
+      },
+      "de_gaulle": {
+        "honor": 7,
+        "opportunism": 2.5,
+        "hypocrisy": 5,
+        "integrity": 8
+      },
+      "franco": {
+        "honor": 2,
+        "hypocrisy": 8,
+        "integrity": 4.5,
+        "opportunism": 8
+      },
+      "frederick_the_great": {
+        "opportunism": 7.5,
+        "hypocrisy": 7,
+        "integrity": 6,
+        "honor": 4
+      },
+      "gandhi": {
+        "hypocrisy": 5.5,
+        "honor": 9,
+        "integrity": 8,
+        "opportunism": 3
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 3,
+        "integrity": 3,
+        "opportunism": 8.5
+      },
+      "hirohito": {
+        "integrity": 3.5,
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 7.5
+      },
+      "julius_caesar": {
+        "hypocrisy": 7.5,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 4.5
+      },
+      "lbj": {
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 3,
+        "hypocrisy": 7.5
+      },
+      "lee_kuan_yew": {
+        "honor": 4.5,
+        "opportunism": 6,
+        "hypocrisy": 5,
+        "integrity": 8
+      },
+      "lincoln": {
+        "honor": 8,
+        "integrity": 8,
+        "opportunism": 4,
+        "hypocrisy": 3.5
+      },
+      "louis_xiv": {
+        "honor": 3,
+        "hypocrisy": 6.5,
+        "opportunism": 6,
+        "integrity": 6
+      },
+      "lumumba": {
+        "hypocrisy": 2,
+        "honor": 5.5,
+        "integrity": 8,
+        "opportunism": 2
+      },
+      "mandela": {
+        "hypocrisy": 2,
+        "integrity": 9,
+        "honor": 9,
+        "opportunism": 2
+      },
+      "mao_zedong": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "integrity": 2,
+        "opportunism": 8
+      },
+      "marcus_aurelius": {
+        "integrity": 9,
+        "opportunism": 1.5,
+        "honor": 9,
+        "hypocrisy": 2
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "integrity": 3,
+        "opportunism": 8
+      },
+      "mussolini": {
+        "opportunism": 9,
+        "integrity": 2.5,
+        "hypocrisy": 8,
+        "honor": 2
+      },
+      "napoleon": {
+        "opportunism": 8.5,
+        "honor": 4,
+        "hypocrisy": 8,
+        "integrity": 4
+      },
+      "nasser": {
+        "integrity": 6,
+        "hypocrisy": 7.5,
+        "opportunism": 6.5,
+        "honor": 5
+      },
+      "nehru": {
+        "honor": 7,
+        "integrity": 7,
+        "hypocrisy": 5.5,
+        "opportunism": 4
+      },
+      "nkrumah": {
+        "honor": 3,
+        "integrity": 5,
+        "opportunism": 6,
+        "hypocrisy": 8
+      },
+      "peron": {
+        "integrity": 3.5,
+        "opportunism": 8,
+        "hypocrisy": 7,
+        "honor": 4
+      },
+      "pierre_trudeau": {
+        "integrity": 6,
+        "honor": 5,
+        "hypocrisy": 6,
+        "opportunism": 5
+      },
+      "pinochet": {
+        "opportunism": 7,
+        "hypocrisy": 9,
+        "integrity": 3,
+        "honor": 2
+      },
+      "robespierre": {
+        "hypocrisy": 8.5,
+        "opportunism": 5,
+        "integrity": 7,
+        "honor": 3
+      },
+      "saladin": {
+        "honor": 8,
+        "hypocrisy": 5,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 4,
+        "integrity": 8.5,
+        "opportunism": 2
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "integrity": 5.5,
+        "honor": 6,
+        "opportunism": 5.5
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "integrity": 3,
+        "opportunism": 8.5
+      },
+      "sukarno": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 6.5,
+        "integrity": 4
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 5,
+        "opportunism": 5.5,
+        "integrity": 6.5,
+        "honor": 7
+      },
+      "thatcher": {
+        "honor": 6,
+        "integrity": 8,
+        "hypocrisy": 6,
+        "opportunism": 3
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 4.5,
+        "integrity": 8,
+        "opportunism": 4.5,
+        "honor": 7
+      },
+      "tito": {
+        "hypocrisy": 7.5,
+        "opportunism": 7.5,
+        "integrity": 4,
+        "honor": 4
+      }
+    },
+    "openai/gpt-5.5": {
+      "akbar": {
+        "hypocrisy": 3.5,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "allende": {
+        "hypocrisy": 4,
+        "honor": 6.5,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "ataturk": {
+        "hypocrisy": 5.5,
+        "honor": 5.5,
+        "opportunism": 5,
+        "integrity": 7
+      },
+      "augustus": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "ben_gurion": {
+        "hypocrisy": 6,
+        "honor": 4.5,
+        "opportunism": 4.5,
+        "integrity": 7
+      },
+      "bismarck": {
+        "hypocrisy": 5.5,
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "bolivar": {
+        "hypocrisy": 6,
+        "honor": 4,
+        "opportunism": 6,
+        "integrity": 6.5
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 2.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "churchill": {
+        "hypocrisy": 7,
+        "honor": 6.5,
+        "opportunism": 6,
+        "integrity": 7.5
+      },
+      "cromwell": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 6,
+        "integrity": 6.5
+      },
+      "de_gaulle": {
+        "hypocrisy": 4,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "franco": {
+        "hypocrisy": 7,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "frederick_the_great": {
+        "hypocrisy": 6,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "gandhi": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 2.5,
+        "integrity": 8
+      },
+      "henry_viii": {
+        "hypocrisy": 8.5,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "hirohito": {
+        "hypocrisy": 7,
+        "honor": 2.5,
+        "opportunism": 7,
+        "integrity": 3
+      },
+      "julius_caesar": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 7.5,
+        "integrity": 4.5
+      },
+      "lbj": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 5,
+        "honor": 5,
+        "opportunism": 5.5,
+        "integrity": 7.5
+      },
+      "lincoln": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "louis_xiv": {
+        "hypocrisy": 6,
+        "honor": 3,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "lumumba": {
+        "hypocrisy": 3,
+        "honor": 5,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "mandela": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "mao_zedong": {
+        "hypocrisy": 8.5,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 2
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 3,
+        "honor": 8,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 2
+      },
+      "mussolini": {
+        "hypocrisy": 8.5,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 6.5,
+        "integrity": 6
+      },
+      "nehru": {
+        "hypocrisy": 5,
+        "honor": 7,
+        "opportunism": 3.5,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 4.5,
+        "integrity": 6
+      },
+      "peron": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 4.5,
+        "honor": 6.5,
+        "opportunism": 4,
+        "integrity": 7
+      },
+      "pinochet": {
+        "hypocrisy": 8.5,
+        "honor": 1,
+        "opportunism": 7.5,
+        "integrity": 2
+      },
+      "robespierre": {
+        "hypocrisy": 6.5,
+        "honor": 2.5,
+        "opportunism": 3.5,
+        "integrity": 7.5
+      },
+      "saladin": {
+        "hypocrisy": 3.5,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "sankara": {
+        "hypocrisy": 3.5,
+        "honor": 5.5,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "honor": 5,
+        "opportunism": 6.5,
+        "integrity": 4.5
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "opportunism": 8.5,
+        "integrity": 2
+      },
+      "sukarno": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 7,
+        "integrity": 5.5
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 4,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "thatcher": {
+        "hypocrisy": 4.5,
+        "honor": 7,
+        "opportunism": 3,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 5,
+        "honor": 6,
+        "opportunism": 4.5,
+        "integrity": 7.5
+      },
+      "tito": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 7,
+        "integrity": 4.5
+      }
+    },
+    "qwen/qwen3.6-max-preview": {
+      "akbar": {
+        "hypocrisy": 3,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "allende": {
+        "hypocrisy": 2.5,
+        "honor": 8.5,
+        "integrity": 8,
+        "opportunism": 1
+      },
+      "ataturk": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 6.5,
+        "integrity": 8
+      },
+      "augustus": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 4
+      },
+      "ben_gurion": {
+        "hypocrisy": 5,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "bismarck": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "bolivar": {
+        "hypocrisy": 6.5,
+        "honor": 6.5,
+        "opportunism": 7,
+        "integrity": 6.5
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 5,
+        "opportunism": 8,
+        "integrity": 3.5
+      },
+      "churchill": {
+        "honor": 7,
+        "hypocrisy": 6.5,
+        "opportunism": 6,
+        "integrity": 7.5
+      },
+      "cromwell": {
+        "honor": 3,
+        "hypocrisy": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "de_gaulle": {
+        "hypocrisy": 4.5,
+        "honor": 7.5,
+        "integrity": 8,
+        "opportunism": 2
+      },
+      "franco": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 5.5
+      },
+      "frederick_the_great": {
+        "hypocrisy": 7,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 7
+      },
+      "gandhi": {
+        "hypocrisy": 3.5,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 8.5
+      },
+      "henry_viii": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 2.5
+      },
+      "hirohito": {
+        "hypocrisy": 6.5,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "julius_caesar": {
+        "hypocrisy": 7.5,
+        "honor": 4.5,
+        "opportunism": 8,
+        "integrity": 5.5
+      },
+      "lbj": {
+        "hypocrisy": 7,
+        "honor": 5.5,
+        "opportunism": 8,
+        "integrity": 3.5
+      },
+      "lee_kuan_yew": {
+        "honor": 6,
+        "hypocrisy": 4.5,
+        "opportunism": 7.5,
+        "integrity": 8.5
+      },
+      "lincoln": {
+        "hypocrisy": 2,
+        "honor": 8.5,
+        "integrity": 8.5,
+        "opportunism": 2
+      },
+      "louis_xiv": {
+        "hypocrisy": 7.5,
+        "honor": 4.5,
+        "integrity": 7.5,
+        "opportunism": 2
+      },
+      "lumumba": {
+        "hypocrisy": 2,
+        "honor": 7.5,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "mandela": {
+        "hypocrisy": 1.5,
+        "honor": 9,
+        "opportunism": 1,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 8.5,
+        "integrity": 2.5,
+        "honor": 2,
+        "opportunism": 7
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 2.5,
+        "honor": 8,
+        "opportunism": 1,
+        "integrity": 8
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 2.5
+      },
+      "mussolini": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 7,
+        "integrity": 6.5
+      },
+      "nehru": {
+        "hypocrisy": 4.5,
+        "honor": 7.5,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 7,
+        "honor": 4.5,
+        "opportunism": 3.5,
+        "integrity": 6.5
+      },
+      "peron": {
+        "hypocrisy": 8,
+        "opportunism": 8,
+        "honor": 3.5,
+        "integrity": 3
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 4,
+        "integrity": 8
+      },
+      "pinochet": {
+        "hypocrisy": 9,
+        "honor": 1.5,
+        "opportunism": 7,
+        "integrity": 4.5
+      },
+      "robespierre": {
+        "hypocrisy": 8,
+        "honor": 2,
+        "integrity": 8.5,
+        "opportunism": 1
+      },
+      "saladin": {
+        "hypocrisy": 3,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 2.5,
+        "opportunism": 1,
+        "honor": 6.5,
+        "integrity": 8.5
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 6.5
+      },
+      "stalin": {
+        "hypocrisy": 9.5,
+        "honor": 1,
+        "opportunism": 9,
+        "integrity": 2.5
+      },
+      "sukarno": {
+        "honor": 4.5,
+        "hypocrisy": 7,
+        "opportunism": 8,
+        "integrity": 5
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 4.5,
+        "honor": 8,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "thatcher": {
+        "honor": 7,
+        "hypocrisy": 5,
+        "opportunism": 2,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 5,
+        "opportunism": 6.5,
+        "honor": 6.5,
+        "integrity": 8
+      },
+      "tito": {
+        "honor": 4.5,
+        "hypocrisy": 8,
+        "opportunism": 8,
+        "integrity": 5
+      }
+    },
+    "x-ai/grok-4.20": {
+      "akbar": {
+        "hypocrisy": 2.5,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 6.5
+      },
+      "allende": {
+        "hypocrisy": 5.5,
+        "honor": 6.5,
+        "opportunism": 4,
+        "integrity": 7
+      },
+      "ataturk": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 5
+      },
+      "augustus": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 9,
+        "integrity": 3.5
+      },
+      "ben_gurion": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 7.5,
+        "integrity": 7
+      },
+      "bismarck": {
+        "hypocrisy": 6,
+        "honor": 5.5,
+        "opportunism": 8,
+        "integrity": 6.5
+      },
+      "bolivar": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 4.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "churchill": {
+        "hypocrisy": 6.5,
+        "honor": 7,
+        "opportunism": 7.5,
+        "integrity": 7
+      },
+      "cromwell": {
+        "honor": 5,
+        "hypocrisy": 5.5,
+        "opportunism": 7,
+        "integrity": 7
+      },
+      "de_gaulle": {
+        "hypocrisy": 3.5,
+        "honor": 7,
+        "opportunism": 4,
+        "integrity": 7.5
+      },
+      "franco": {
+        "hypocrisy": 6,
+        "honor": 2.5,
+        "opportunism": 7.5,
+        "integrity": 6.5
+      },
+      "frederick_the_great": {
+        "hypocrisy": 6.5,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 4.5
+      },
+      "gandhi": {
+        "hypocrisy": 6,
+        "honor": 8,
+        "opportunism": 6,
+        "integrity": 8
+      },
+      "henry_viii": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "hirohito": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 3.5
+      },
+      "julius_caesar": {
+        "hypocrisy": 7,
+        "honor": 5.5,
+        "opportunism": 8,
+        "integrity": 6
+      },
+      "lbj": {
+        "hypocrisy": 7.5,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "hypocrisy": 4.5,
+        "honor": 6,
+        "opportunism": 7,
+        "integrity": 8
+      },
+      "lincoln": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "louis_xiv": {
+        "hypocrisy": 6.5,
+        "honor": 4,
+        "integrity": 7,
+        "opportunism": 6
+      },
+      "lumumba": {
+        "hypocrisy": 3,
+        "honor": 6.5,
+        "opportunism": 3.5,
+        "integrity": 7.5
+      },
+      "mandela": {
+        "hypocrisy": 2.5,
+        "honor": 9,
+        "opportunism": 4,
+        "integrity": 9
+      },
+      "mao_zedong": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 7.5,
+        "integrity": 3.5
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 2,
+        "honor": 8.5,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 8.5,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 3.5
+      },
+      "mussolini": {
+        "hypocrisy": 8,
+        "honor": 3,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 4.5,
+        "opportunism": 7,
+        "integrity": 6
+      },
+      "nehru": {
+        "hypocrisy": 6,
+        "honor": 7,
+        "opportunism": 4.5,
+        "integrity": 7.5
+      },
+      "nkrumah": {
+        "hypocrisy": 7,
+        "honor": 3.5,
+        "opportunism": 5,
+        "integrity": 6.5
+      },
+      "peron": {
+        "hypocrisy": 6.5,
+        "honor": 4,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "pierre_trudeau": {
+        "hypocrisy": 5,
+        "honor": 6,
+        "opportunism": 6,
+        "integrity": 7
+      },
+      "pinochet": {
+        "hypocrisy": 7.5,
+        "honor": 2,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "robespierre": {
+        "hypocrisy": 6.5,
+        "honor": 3,
+        "opportunism": 4.5,
+        "integrity": 8
+      },
+      "saladin": {
+        "hypocrisy": 2.5,
+        "honor": 8,
+        "opportunism": 6.5,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 3.5,
+        "honor": 6.5,
+        "opportunism": 2,
+        "integrity": 8.5
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "honor": 7,
+        "opportunism": 6,
+        "integrity": 6
+      },
+      "stalin": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "opportunism": 8.5,
+        "integrity": 3
+      },
+      "sukarno": {
+        "hypocrisy": 6.5,
+        "opportunism": 7,
+        "honor": 4.5,
+        "integrity": 6
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 5,
+        "honor": 7,
+        "opportunism": 7,
+        "integrity": 6.5
+      },
+      "thatcher": {
+        "hypocrisy": 3,
+        "honor": 7.5,
+        "opportunism": 3.5,
+        "integrity": 8
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 4.5,
+        "honor": 7,
+        "opportunism": 6.5,
+        "integrity": 8
+      },
+      "tito": {
+        "hypocrisy": 7,
+        "honor": 3,
+        "opportunism": 7,
+        "integrity": 6
+      }
+    },
+    "z-ai/glm-5.1": {
+      "akbar": {
+        "honor": 7,
+        "hypocrisy": 4,
+        "integrity": 7.5,
+        "opportunism": 3.5
+      },
+      "allende": {
+        "hypocrisy": 4.5,
+        "honor": 8.5,
+        "opportunism": 3,
+        "integrity": 9
+      },
+      "ataturk": {
+        "hypocrisy": 4,
+        "honor": 8,
+        "integrity": 8,
+        "opportunism": 5.5
+      },
+      "augustus": {
+        "hypocrisy": 8.5,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "ben_gurion": {
+        "honor": 5.5,
+        "hypocrisy": 6.5,
+        "opportunism": 6.5,
+        "integrity": 7
+      },
+      "bismarck": {
+        "honor": 5.5,
+        "opportunism": 8.5,
+        "integrity": 3,
+        "hypocrisy": 8
+      },
+      "bolivar": {
+        "honor": 7,
+        "hypocrisy": 7,
+        "integrity": 7.5,
+        "opportunism": 6.5
+      },
+      "catherine_the_great": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 8,
+        "integrity": 4
+      },
+      "churchill": {
+        "hypocrisy": 7.5,
+        "honor": 6.5,
+        "opportunism": 8,
+        "integrity": 7.5
+      },
+      "cromwell": {
+        "hypocrisy": 7.5,
+        "opportunism": 7,
+        "honor": 3,
+        "integrity": 8
+      },
+      "de_gaulle": {
+        "hypocrisy": 5,
+        "opportunism": 3,
+        "honor": 7.5,
+        "integrity": 8.5
+      },
+      "franco": {
+        "hypocrisy": 8,
+        "honor": 1.5,
+        "opportunism": 8,
+        "integrity": 7.5
+      },
+      "frederick_the_great": {
+        "hypocrisy": 7.5,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 5
+      },
+      "gandhi": {
+        "hypocrisy": 6,
+        "opportunism": 2,
+        "honor": 9,
+        "integrity": 9
+      },
+      "henry_viii": {
+        "hypocrisy": 9,
+        "honor": 2,
+        "opportunism": 9,
+        "integrity": 2
+      },
+      "hirohito": {
+        "honor": 2,
+        "hypocrisy": 8,
+        "integrity": 3,
+        "opportunism": 6
+      },
+      "julius_caesar": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 5.5
+      },
+      "lbj": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3
+      },
+      "lee_kuan_yew": {
+        "honor": 6,
+        "hypocrisy": 4.5,
+        "opportunism": 7,
+        "integrity": 8.5
+      },
+      "lincoln": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "integrity": 9,
+        "opportunism": 3.5
+      },
+      "louis_xiv": {
+        "honor": 3.5,
+        "opportunism": 6.5,
+        "hypocrisy": 7.5,
+        "integrity": 7.5
+      },
+      "lumumba": {
+        "hypocrisy": 2.5,
+        "honor": 8,
+        "opportunism": 2.5,
+        "integrity": 9
+      },
+      "mandela": {
+        "hypocrisy": 2,
+        "honor": 10,
+        "opportunism": 2,
+        "integrity": 10
+      },
+      "mao_zedong": {
+        "hypocrisy": 9,
+        "honor": 1.5,
+        "opportunism": 8,
+        "integrity": 2.5
+      },
+      "marcus_aurelius": {
+        "hypocrisy": 3,
+        "honor": 9,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "mugabe": {
+        "hypocrisy": 9,
+        "honor": 1.5,
+        "opportunism": 9
+      },
+      "mussolini": {
+        "hypocrisy": 9,
+        "honor": 1.5,
+        "opportunism": 9.5,
+        "integrity": 2
+      },
+      "napoleon": {
+        "hypocrisy": 8,
+        "honor": 4,
+        "opportunism": 9,
+        "integrity": 3.5
+      },
+      "nasser": {
+        "hypocrisy": 7,
+        "honor": 4,
+        "opportunism": 6.5,
+        "integrity": 7.5
+      },
+      "nehru": {
+        "hypocrisy": 4.5,
+        "honor": 8,
+        "opportunism": 3.5,
+        "integrity": 8
+      },
+      "nkrumah": {
+        "hypocrisy": 7.5,
+        "honor": 4,
+        "opportunism": 7,
+        "integrity": 5.5
+      },
+      "peron": {
+        "hypocrisy": 7.5,
+        "honor": 3,
+        "opportunism": 9,
+        "integrity": 3.5
+      },
+      "pierre_trudeau": {
+        "honor": 5.5,
+        "hypocrisy": 6.5,
+        "integrity": 8,
+        "opportunism": 4
+      },
+      "pinochet": {
+        "hypocrisy": 9,
+        "honor": 1,
+        "integrity": 3,
+        "opportunism": 8
+      },
+      "robespierre": {
+        "hypocrisy": 8.5,
+        "honor": 2,
+        "opportunism": 3.5,
+        "integrity": 8
+      },
+      "saladin": {
+        "hypocrisy": 2,
+        "honor": 9,
+        "opportunism": 5,
+        "integrity": 8
+      },
+      "sankara": {
+        "hypocrisy": 4,
+        "honor": 4.5,
+        "opportunism": 2,
+        "integrity": 9
+      },
+      "selassie": {
+        "hypocrisy": 7,
+        "opportunism": 7,
+        "honor": 5,
+        "integrity": 6
+      },
+      "stalin": {
+        "hypocrisy": 10,
+        "opportunism": 9.5,
+        "honor": 1,
+        "integrity": 1
+      },
+      "sukarno": {
+        "hypocrisy": 8,
+        "honor": 3.5,
+        "opportunism": 8.5,
+        "integrity": 3.5
+      },
+      "suleiman_the_magnificent": {
+        "hypocrisy": 6,
+        "honor": 6,
+        "integrity": 8,
+        "opportunism": 5
+      },
+      "thatcher": {
+        "hypocrisy": 6.5,
+        "honor": 6,
+        "opportunism": 3,
+        "integrity": 8.5
+      },
+      "theodore_roosevelt": {
+        "hypocrisy": 4,
+        "opportunism": 6,
+        "honor": 7.5,
+        "integrity": 9
+      },
+      "tito": {
+        "honor": 4,
+        "hypocrisy": 7.5,
+        "opportunism": 8,
+        "integrity": 3.5
+      }
+    }
+  },
+  "variance": {
+    "akbar": {
+      "honor": {
+        "mean": 7.18,
+        "stdev": 0.64,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 3.95,
+        "stdev": 1.08,
+        "range": 3.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 6
+      },
+      "integrity": {
+        "mean": 7.35,
+        "stdev": 0.63,
+        "range": 1.5,
+        "n": 10,
+        "min": 6.5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 5.77,
+        "stdev": 1.4,
+        "range": 4,
+        "n": 11,
+        "min": 3,
+        "max": 7
+      }
+    },
+    "allende": {
+      "honor": {
+        "mean": 7.77,
+        "stdev": 0.75,
+        "range": 2.0,
+        "n": 11,
+        "min": 6.5,
+        "max": 8.5
+      },
+      "hypocrisy": {
+        "mean": 4.18,
+        "stdev": 1.08,
+        "range": 4.0,
+        "n": 11,
+        "min": 2.5,
+        "max": 6.5
+      },
+      "integrity": {
+        "mean": 8.05,
+        "stdev": 0.57,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 2.77,
+        "stdev": 1.25,
+        "range": 4,
+        "n": 11,
+        "min": 1,
+        "max": 5
+      }
+    },
+    "ataturk": {
+      "honor": {
+        "mean": 6.68,
+        "stdev": 0.81,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.64,
+        "stdev": 0.92,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 7.18,
+        "stdev": 0.96,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.0,
+        "stdev": 1.1,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      }
+    },
+    "augustus": {
+      "honor": {
+        "mean": 4.05,
+        "stdev": 1.59,
+        "range": 5,
+        "n": 11,
+        "min": 3,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 8.05,
+        "stdev": 0.91,
+        "range": 3,
+        "n": 11,
+        "min": 6,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 4.18,
+        "stdev": 1.98,
+        "range": 6,
+        "n": 11,
+        "min": 2,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 8.77,
+        "stdev": 0.41,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      }
+    },
+    "ben_gurion": {
+      "honor": {
+        "mean": 6.14,
+        "stdev": 1.25,
+        "range": 3.5,
+        "n": 11,
+        "min": 4.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 6.0,
+        "stdev": 0.87,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 7.05,
+        "stdev": 0.79,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 5.95,
+        "stdev": 1.62,
+        "range": 5,
+        "n": 10,
+        "min": 3,
+        "max": 8
+      }
+    },
+    "bismarck": {
+      "honor": {
+        "mean": 5.59,
+        "stdev": 1.26,
+        "range": 4,
+        "n": 11,
+        "min": 4,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 6.5,
+        "stdev": 1.3,
+        "range": 4.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 4.25,
+        "stdev": 1.89,
+        "range": 5.5,
+        "n": 10,
+        "min": 2.5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 8.41,
+        "stdev": 0.54,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      }
+    },
+    "bolivar": {
+      "honor": {
+        "mean": 5.59,
+        "stdev": 1.46,
+        "range": 4.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 6.64,
+        "stdev": 0.55,
+        "range": 1.5,
+        "n": 11,
+        "min": 6,
+        "max": 7.5
+      },
+      "integrity": {
+        "mean": 6.5,
+        "stdev": 0.95,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.5,
+        "stdev": 0.67,
+        "range": 2,
+        "n": 10,
+        "min": 6,
+        "max": 8
+      }
+    },
+    "catherine_the_great": {
+      "honor": {
+        "mean": 4.05,
+        "stdev": 1.46,
+        "range": 4.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 7
+      },
+      "hypocrisy": {
+        "mean": 7.86,
+        "stdev": 0.78,
+        "range": 3,
+        "n": 11,
+        "min": 6,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 4.55,
+        "stdev": 1.56,
+        "range": 5,
+        "n": 11,
+        "min": 3,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 7.86,
+        "stdev": 0.32,
+        "range": 1,
+        "n": 11,
+        "min": 7,
+        "max": 8
+      }
+    },
+    "churchill": {
+      "honor": {
+        "mean": 6.59,
+        "stdev": 0.86,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 7.05,
+        "stdev": 0.61,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 7.14,
+        "stdev": 0.67,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.5,
+        "stdev": 0.77,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      }
+    },
+    "cromwell": {
+      "honor": {
+        "mean": 4.18,
+        "stdev": 1.15,
+        "range": 3,
+        "n": 11,
+        "min": 3,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 7.41,
+        "stdev": 0.83,
+        "range": 3.0,
+        "n": 11,
+        "min": 5.5,
+        "max": 8.5
+      },
+      "integrity": {
+        "mean": 7.23,
+        "stdev": 0.72,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.68,
+        "stdev": 0.72,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      }
+    },
+    "de_gaulle": {
+      "honor": {
+        "mean": 7.23,
+        "stdev": 0.72,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.14,
+        "stdev": 1.12,
+        "range": 3.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 7.73,
+        "stdev": 0.52,
+        "range": 1.5,
+        "n": 11,
+        "min": 7,
+        "max": 8.5
+      },
+      "opportunism": {
+        "mean": 3.59,
+        "stdev": 1.46,
+        "range": 5,
+        "n": 11,
+        "min": 2,
+        "max": 7
+      }
+    },
+    "franco": {
+      "honor": {
+        "mean": 2.18,
+        "stdev": 0.75,
+        "range": 2.5,
+        "n": 11,
+        "min": 1.5,
+        "max": 4
+      },
+      "hypocrisy": {
+        "mean": 7.55,
+        "stdev": 0.69,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 5.36,
+        "stdev": 1.45,
+        "range": 4.0,
+        "n": 11,
+        "min": 3.5,
+        "max": 7.5
+      },
+      "opportunism": {
+        "mean": 8.09,
+        "stdev": 0.38,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      }
+    },
+    "frederick_the_great": {
+      "honor": {
+        "mean": 4.41,
+        "stdev": 1.7,
+        "range": 5,
+        "n": 11,
+        "min": 3,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 6.95,
+        "stdev": 1.21,
+        "range": 4.5,
+        "n": 11,
+        "min": 4,
+        "max": 8.5
+      },
+      "integrity": {
+        "mean": 5.14,
+        "stdev": 1.75,
+        "range": 5.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 7.86,
+        "stdev": 0.81,
+        "range": 3,
+        "n": 11,
+        "min": 6,
+        "max": 9
+      }
+    },
+    "gandhi": {
+      "honor": {
+        "mean": 8.77,
+        "stdev": 0.41,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "hypocrisy": {
+        "mean": 4.85,
+        "stdev": 1.43,
+        "range": 5,
+        "n": 10,
+        "min": 2,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 8.64,
+        "stdev": 0.55,
+        "range": 1.5,
+        "n": 11,
+        "min": 8,
+        "max": 9.5
+      },
+      "opportunism": {
+        "mean": 2.82,
+        "stdev": 1.15,
+        "range": 4,
+        "n": 11,
+        "min": 2,
+        "max": 6
+      }
+    },
+    "henry_viii": {
+      "honor": {
+        "mean": 2.5,
+        "stdev": 0.63,
+        "range": 2.0,
+        "n": 11,
+        "min": 1.5,
+        "max": 3.5
+      },
+      "hypocrisy": {
+        "mean": 8.68,
+        "stdev": 0.46,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 3.18,
+        "stdev": 0.75,
+        "range": 2.5,
+        "n": 11,
+        "min": 2,
+        "max": 4.5
+      },
+      "opportunism": {
+        "mean": 8.55,
+        "stdev": 0.47,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      }
+    },
+    "hirohito": {
+      "honor": {
+        "mean": 3.27,
+        "stdev": 1.29,
+        "range": 4,
+        "n": 11,
+        "min": 2,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 7.45,
+        "stdev": 0.52,
+        "range": 1.5,
+        "n": 11,
+        "min": 6.5,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 3.59,
+        "stdev": 0.63,
+        "range": 2,
+        "n": 11,
+        "min": 3,
+        "max": 5
+      },
+      "opportunism": {
+        "mean": 7.5,
+        "stdev": 0.71,
+        "range": 2.5,
+        "n": 11,
+        "min": 6,
+        "max": 8.5
+      }
+    },
+    "julius_caesar": {
+      "honor": {
+        "mean": 4.95,
+        "stdev": 1.15,
+        "range": 3.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 7
+      },
+      "hypocrisy": {
+        "mean": 7.09,
+        "stdev": 0.54,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 5.18,
+        "stdev": 1.01,
+        "range": 3.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 7
+      },
+      "opportunism": {
+        "mean": 7.86,
+        "stdev": 0.74,
+        "range": 3,
+        "n": 11,
+        "min": 6,
+        "max": 9
+      }
+    },
+    "lbj": {
+      "honor": {
+        "mean": 4.64,
+        "stdev": 1.1,
+        "range": 3.5,
+        "n": 11,
+        "min": 3.5,
+        "max": 7
+      },
+      "hypocrisy": {
+        "mean": 7.27,
+        "stdev": 0.61,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 3.5,
+        "stdev": 1.02,
+        "range": 3,
+        "n": 11,
+        "min": 3,
+        "max": 6
+      },
+      "opportunism": {
+        "mean": 8.18,
+        "stdev": 0.4,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      }
+    },
+    "lee_kuan_yew": {
+      "honor": {
+        "mean": 5.59,
+        "stdev": 1.32,
+        "range": 5,
+        "n": 11,
+        "min": 3,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.05,
+        "stdev": 0.91,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 8.05,
+        "stdev": 0.52,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 6.3,
+        "stdev": 1.03,
+        "range": 3.5,
+        "n": 10,
+        "min": 4,
+        "max": 7.5
+      }
+    },
+    "lincoln": {
+      "honor": {
+        "mean": 8.35,
+        "stdev": 0.47,
+        "range": 1,
+        "n": 10,
+        "min": 8,
+        "max": 9
+      },
+      "hypocrisy": {
+        "mean": 3.95,
+        "stdev": 0.93,
+        "range": 3.5,
+        "n": 11,
+        "min": 2,
+        "max": 5.5
+      },
+      "integrity": {
+        "mean": 8.32,
+        "stdev": 0.6,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 4.05,
+        "stdev": 1.21,
+        "range": 4.5,
+        "n": 11,
+        "min": 2,
+        "max": 6.5
+      }
+    },
+    "louis_xiv": {
+      "honor": {
+        "mean": 3.85,
+        "stdev": 1.27,
+        "range": 3.5,
+        "n": 10,
+        "min": 2.5,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 6.91,
+        "stdev": 0.74,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 6.5,
+        "stdev": 1.0,
+        "range": 3.5,
+        "n": 11,
+        "min": 4.5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 5.5,
+        "stdev": 1.88,
+        "range": 6,
+        "n": 11,
+        "min": 2,
+        "max": 8
+      }
+    },
+    "lumumba": {
+      "honor": {
+        "mean": 6.64,
+        "stdev": 1.25,
+        "range": 3.5,
+        "n": 11,
+        "min": 4.5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 2.75,
+        "stdev": 0.63,
+        "range": 2,
+        "n": 10,
+        "min": 2,
+        "max": 4
+      },
+      "integrity": {
+        "mean": 8.18,
+        "stdev": 0.46,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 2.9,
+        "stdev": 0.77,
+        "range": 2,
+        "n": 10,
+        "min": 2,
+        "max": 4
+      }
+    },
+    "mandela": {
+      "honor": {
+        "mean": 9.09,
+        "stdev": 0.3,
+        "range": 1,
+        "n": 11,
+        "min": 9,
+        "max": 10
+      },
+      "hypocrisy": {
+        "mean": 2.45,
+        "stdev": 0.88,
+        "range": 3.0,
+        "n": 11,
+        "min": 1.5,
+        "max": 4.5
+      },
+      "integrity": {
+        "mean": 8.86,
+        "stdev": 0.55,
+        "range": 2,
+        "n": 11,
+        "min": 8,
+        "max": 10
+      },
+      "opportunism": {
+        "mean": 2.55,
+        "stdev": 1.11,
+        "range": 4,
+        "n": 11,
+        "min": 1,
+        "max": 5
+      }
+    },
+    "mao_zedong": {
+      "honor": {
+        "mean": 2.1,
+        "stdev": 0.7,
+        "range": 2,
+        "n": 10,
+        "min": 1,
+        "max": 3
+      },
+      "hypocrisy": {
+        "mean": 8.65,
+        "stdev": 0.53,
+        "range": 1.5,
+        "n": 10,
+        "min": 8,
+        "max": 9.5
+      },
+      "integrity": {
+        "mean": 3.0,
+        "stdev": 0.77,
+        "range": 2,
+        "n": 11,
+        "min": 2,
+        "max": 4
+      },
+      "opportunism": {
+        "mean": 7.77,
+        "stdev": 0.47,
+        "range": 1.5,
+        "n": 11,
+        "min": 7,
+        "max": 8.5
+      }
+    },
+    "marcus_aurelius": {
+      "honor": {
+        "mean": 8.59,
+        "stdev": 0.49,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "hypocrisy": {
+        "mean": 2.95,
+        "stdev": 1.04,
+        "range": 3.5,
+        "n": 11,
+        "min": 2,
+        "max": 5.5
+      },
+      "integrity": {
+        "mean": 8.77,
+        "stdev": 0.52,
+        "range": 1.5,
+        "n": 11,
+        "min": 8,
+        "max": 9.5
+      },
+      "opportunism": {
+        "mean": 1.95,
+        "stdev": 0.65,
+        "range": 2,
+        "n": 11,
+        "min": 1,
+        "max": 3
+      }
+    },
+    "mugabe": {
+      "honor": {
+        "mean": 1.95,
+        "stdev": 0.47,
+        "range": 2,
+        "n": 11,
+        "min": 1,
+        "max": 3
+      },
+      "hypocrisy": {
+        "mean": 8.86,
+        "stdev": 0.32,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 3.11,
+        "stdev": 0.82,
+        "range": 2,
+        "n": 9,
+        "min": 2,
+        "max": 4
+      },
+      "opportunism": {
+        "mean": 8.18,
+        "stdev": 0.46,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      }
+    },
+    "mussolini": {
+      "honor": {
+        "mean": 1.91,
+        "stdev": 0.49,
+        "range": 2,
+        "n": 11,
+        "min": 1,
+        "max": 3
+      },
+      "hypocrisy": {
+        "mean": 8.64,
+        "stdev": 0.45,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 2.55,
+        "stdev": 0.79,
+        "range": 2,
+        "n": 11,
+        "min": 2,
+        "max": 4
+      },
+      "opportunism": {
+        "mean": 9.0,
+        "stdev": 0.59,
+        "range": 2,
+        "n": 11,
+        "min": 8,
+        "max": 10
+      }
+    },
+    "napoleon": {
+      "honor": {
+        "mean": 3.91,
+        "stdev": 1.2,
+        "range": 3.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 8.05,
+        "stdev": 0.47,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 3.77,
+        "stdev": 0.98,
+        "range": 3,
+        "n": 11,
+        "min": 3,
+        "max": 6
+      },
+      "opportunism": {
+        "mean": 8.68,
+        "stdev": 0.4,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      }
+    },
+    "nasser": {
+      "honor": {
+        "mean": 4.36,
+        "stdev": 0.95,
+        "range": 3,
+        "n": 11,
+        "min": 3,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 6.91,
+        "stdev": 0.49,
+        "range": 1.5,
+        "n": 11,
+        "min": 6,
+        "max": 7.5
+      },
+      "integrity": {
+        "mean": 6.68,
+        "stdev": 0.98,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.75,
+        "stdev": 0.89,
+        "range": 3,
+        "n": 10,
+        "min": 5,
+        "max": 8
+      }
+    },
+    "nehru": {
+      "honor": {
+        "mean": 7.09,
+        "stdev": 0.8,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.45,
+        "stdev": 0.82,
+        "range": 2.5,
+        "n": 11,
+        "min": 4,
+        "max": 6.5
+      },
+      "integrity": {
+        "mean": 7.68,
+        "stdev": 0.4,
+        "range": 1,
+        "n": 11,
+        "min": 7,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 4.05,
+        "stdev": 1.4,
+        "range": 5,
+        "n": 11,
+        "min": 2,
+        "max": 7
+      }
+    },
+    "nkrumah": {
+      "honor": {
+        "mean": 4.14,
+        "stdev": 1.32,
+        "range": 4.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 7
+      },
+      "hypocrisy": {
+        "mean": 7.09,
+        "stdev": 0.63,
+        "range": 2,
+        "n": 11,
+        "min": 6,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 6.59,
+        "stdev": 0.97,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 5.14,
+        "stdev": 1.5,
+        "range": 4,
+        "n": 11,
+        "min": 3,
+        "max": 7
+      }
+    },
+    "peron": {
+      "honor": {
+        "mean": 3.77,
+        "stdev": 0.61,
+        "range": 2,
+        "n": 11,
+        "min": 3,
+        "max": 5
+      },
+      "hypocrisy": {
+        "mean": 7.45,
+        "stdev": 0.55,
+        "range": 1.5,
+        "n": 10,
+        "min": 6.5,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 3.6,
+        "stdev": 0.81,
+        "range": 2,
+        "n": 10,
+        "min": 3,
+        "max": 5
+      },
+      "opportunism": {
+        "mean": 8.23,
+        "stdev": 0.61,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      }
+    },
+    "pierre_trudeau": {
+      "honor": {
+        "mean": 6.32,
+        "stdev": 0.87,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.86,
+        "stdev": 1.03,
+        "range": 3.5,
+        "n": 11,
+        "min": 4,
+        "max": 7.5
+      },
+      "integrity": {
+        "mean": 7.45,
+        "stdev": 0.72,
+        "range": 2.5,
+        "n": 11,
+        "min": 6,
+        "max": 8.5
+      },
+      "opportunism": {
+        "mean": 4.91,
+        "stdev": 1.04,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      }
+    },
+    "pinochet": {
+      "honor": {
+        "mean": 1.59,
+        "stdev": 0.44,
+        "range": 1,
+        "n": 11,
+        "min": 1,
+        "max": 2
+      },
+      "hypocrisy": {
+        "mean": 8.59,
+        "stdev": 0.54,
+        "range": 1.5,
+        "n": 11,
+        "min": 7.5,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 3.0,
+        "stdev": 0.87,
+        "range": 2.5,
+        "n": 11,
+        "min": 2,
+        "max": 4.5
+      },
+      "opportunism": {
+        "mean": 7.77,
+        "stdev": 0.61,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      }
+    },
+    "robespierre": {
+      "honor": {
+        "mean": 2.95,
+        "stdev": 0.91,
+        "range": 3,
+        "n": 11,
+        "min": 2,
+        "max": 5
+      },
+      "hypocrisy": {
+        "mean": 7.64,
+        "stdev": 1.05,
+        "range": 3,
+        "n": 11,
+        "min": 6,
+        "max": 9
+      },
+      "integrity": {
+        "mean": 8.05,
+        "stdev": 0.76,
+        "range": 2.5,
+        "n": 11,
+        "min": 7,
+        "max": 9.5
+      },
+      "opportunism": {
+        "mean": 3.41,
+        "stdev": 1.76,
+        "range": 6,
+        "n": 11,
+        "min": 1,
+        "max": 7
+      }
+    },
+    "saladin": {
+      "honor": {
+        "mean": 8.55,
+        "stdev": 0.52,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "hypocrisy": {
+        "mean": 3.05,
+        "stdev": 1.04,
+        "range": 3.5,
+        "n": 11,
+        "min": 1.5,
+        "max": 5
+      },
+      "integrity": {
+        "mean": 8.18,
+        "stdev": 0.6,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 5.68,
+        "stdev": 1.03,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      }
+    },
+    "sankara": {
+      "honor": {
+        "mean": 6.83,
+        "stdev": 1.5,
+        "range": 4.5,
+        "n": 9,
+        "min": 4.5,
+        "max": 9
+      },
+      "hypocrisy": {
+        "mean": 3.27,
+        "stdev": 1.03,
+        "range": 3.5,
+        "n": 11,
+        "min": 2,
+        "max": 5.5
+      },
+      "integrity": {
+        "mean": 8.68,
+        "stdev": 0.4,
+        "range": 1,
+        "n": 11,
+        "min": 8,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 1.73,
+        "stdev": 0.47,
+        "range": 1,
+        "n": 11,
+        "min": 1,
+        "max": 2
+      }
+    },
+    "selassie": {
+      "honor": {
+        "mean": 6.45,
+        "stdev": 1.04,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 7.32,
+        "stdev": 0.72,
+        "range": 2.5,
+        "n": 11,
+        "min": 6,
+        "max": 8.5
+      },
+      "integrity": {
+        "mean": 5.55,
+        "stdev": 1.4,
+        "range": 5,
+        "n": 11,
+        "min": 3,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.05,
+        "stdev": 0.93,
+        "range": 3,
+        "n": 10,
+        "min": 4,
+        "max": 7
+      }
+    },
+    "stalin": {
+      "honor": {
+        "mean": 1.14,
+        "stdev": 0.32,
+        "range": 1,
+        "n": 11,
+        "min": 1,
+        "max": 2
+      },
+      "hypocrisy": {
+        "mean": 9.18,
+        "stdev": 0.56,
+        "range": 2,
+        "n": 11,
+        "min": 8,
+        "max": 10
+      },
+      "integrity": {
+        "mean": 2.36,
+        "stdev": 0.71,
+        "range": 2,
+        "n": 11,
+        "min": 1,
+        "max": 3
+      },
+      "opportunism": {
+        "mean": 8.82,
+        "stdev": 0.4,
+        "range": 1.5,
+        "n": 11,
+        "min": 8,
+        "max": 9.5
+      }
+    },
+    "sukarno": {
+      "honor": {
+        "mean": 4.05,
+        "stdev": 0.91,
+        "range": 3,
+        "n": 11,
+        "min": 3,
+        "max": 6
+      },
+      "hypocrisy": {
+        "mean": 7.5,
+        "stdev": 0.55,
+        "range": 1.5,
+        "n": 11,
+        "min": 6.5,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 4.9,
+        "stdev": 0.97,
+        "range": 2.5,
+        "n": 10,
+        "min": 3.5,
+        "max": 6
+      },
+      "opportunism": {
+        "mean": 7.55,
+        "stdev": 0.61,
+        "range": 2.0,
+        "n": 11,
+        "min": 6.5,
+        "max": 8.5
+      }
+    },
+    "suleiman_the_magnificent": {
+      "honor": {
+        "mean": 6.95,
+        "stdev": 0.83,
+        "range": 2,
+        "n": 10,
+        "min": 6,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.23,
+        "stdev": 0.82,
+        "range": 2,
+        "n": 11,
+        "min": 4,
+        "max": 6
+      },
+      "integrity": {
+        "mean": 7.18,
+        "stdev": 0.6,
+        "range": 1.5,
+        "n": 11,
+        "min": 6.5,
+        "max": 8
+      },
+      "opportunism": {
+        "mean": 6.0,
+        "stdev": 0.81,
+        "range": 2,
+        "n": 11,
+        "min": 5,
+        "max": 7
+      }
+    },
+    "thatcher": {
+      "honor": {
+        "mean": 6.85,
+        "stdev": 0.67,
+        "range": 2,
+        "n": 10,
+        "min": 6,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.5,
+        "stdev": 1.3,
+        "range": 4,
+        "n": 11,
+        "min": 3,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 8.05,
+        "stdev": 0.15,
+        "range": 0.5,
+        "n": 11,
+        "min": 8,
+        "max": 8.5
+      },
+      "opportunism": {
+        "mean": 3.41,
+        "stdev": 1.2,
+        "range": 4,
+        "n": 11,
+        "min": 2,
+        "max": 6
+      }
+    },
+    "theodore_roosevelt": {
+      "honor": {
+        "mean": 6.73,
+        "stdev": 0.93,
+        "range": 3,
+        "n": 11,
+        "min": 5,
+        "max": 8
+      },
+      "hypocrisy": {
+        "mean": 5.27,
+        "stdev": 0.98,
+        "range": 3,
+        "n": 11,
+        "min": 4,
+        "max": 7
+      },
+      "integrity": {
+        "mean": 8.0,
+        "stdev": 0.5,
+        "range": 2,
+        "n": 11,
+        "min": 7,
+        "max": 9
+      },
+      "opportunism": {
+        "mean": 5.82,
+        "stdev": 1.06,
+        "range": 3.5,
+        "n": 11,
+        "min": 4,
+        "max": 7.5
+      }
+    },
+    "tito": {
+      "honor": {
+        "mean": 4.18,
+        "stdev": 1.52,
+        "range": 4.5,
+        "n": 11,
+        "min": 2.5,
+        "max": 7
+      },
+      "hypocrisy": {
+        "mean": 7.59,
+        "stdev": 0.44,
+        "range": 1,
+        "n": 11,
+        "min": 7,
+        "max": 8
+      },
+      "integrity": {
+        "mean": 4.95,
+        "stdev": 0.93,
+        "range": 2.5,
+        "n": 10,
+        "min": 3.5,
+        "max": 6
+      },
+      "opportunism": {
+        "mean": 7.27,
+        "stdev": 0.75,
+        "range": 2.5,
+        "n": 11,
+        "min": 5.5,
+        "max": 8
+      }
+    }
+  }
+}

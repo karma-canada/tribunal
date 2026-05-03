@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tribunal — Phase A Variance Heatmap (3872 cells, 44 figures)</title>
+<meta name="description" content="Interactive variance heatmap of inter-model agreement across 11 frontier LLMs scoring 44 historical figures on 4 character axes.">
+<style>
+:root { --bg: #fff; --text: #1a1a1a; --muted: #555; --accent: #0a3d62; --rule: #e0e0e0; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 1200px; margin: 1em auto; padding: 0 1em; color: var(--text); }
+header { border-bottom: 2px solid var(--text); padding-bottom: 1em; margin-bottom: 1.5em; }
+h1 { font-size: 1.5em; margin: 0; }
+.subtitle { color: var(--muted); margin: 0.3em 0 0; font-size: 0.95em; }
+.nav { margin: 0.7em 0 0; font-size: 0.9em; }
+.nav a { color: var(--accent); text-decoration: none; margin-right: 1.5em; }
+.nav a:hover { text-decoration: underline; }
+.controls { background: #f8f8f8; padding: 0.8em 1em; border-radius: 4px; margin-bottom: 1.5em; display: flex; gap: 1em; flex-wrap: wrap; align-items: center; font-size: 0.95em; }
+.controls label { font-weight: 600; }
+.controls select { padding: 0.3em 0.5em; }
+.legend { display: flex; align-items: center; gap: 0.6em; font-size: 0.9em; color: var(--muted); }
+.legend-bar { display: inline-block; width: 220px; height: 14px; background: linear-gradient(to right, #ff5252, #ffeb3b, #4caf50); border-radius: 2px; }
+table.heatmap { border-collapse: collapse; width: 100%; font-size: 0.85em; }
+table.heatmap th, table.heatmap td { border: 1px solid #ddd; padding: 0.4em 0.5em; text-align: center; }
+table.heatmap th { background: #f0f0f0; font-weight: 600; }
+table.heatmap th.row-label { text-align: left; font-weight: 500; }
+table.heatmap td.score { font-family: ui-monospace, monospace; font-weight: 600; cursor: default; }
+table.heatmap td.score.empty { background: #fafafa; color: #aaa; font-weight: normal; }
+.summary { background: #eaf0f6; border-left: 4px solid var(--accent); padding: 0.8em 1em; margin-top: 1.5em; font-size: 0.95em; }
+.summary p { margin: 0.4em 0; }
+.summary code { background: rgba(0,0,0,0.05); padding: 1px 4px; border-radius: 2px; }
+.variance-table { margin-top: 2em; }
+.variance-table h3 { margin-bottom: 0.5em; }
+.variance-table table { font-size: 0.88em; }
+.range-bar-cell { padding: 0; }
+.range-bar { height: 10px; background: #ff5252; border-radius: 2px; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 0.85em; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Phase A Variance Heatmap (v0.6)</h1>
+<p class="subtitle">11 frontier LLMs × 44 historical figures × 4 character axes × 2 reps = 3872 cells. Time-span 1st c BCE → late 20th c CE, 8 jurisdictional cohorts. Methodology validated against four contamination probes (stability, framing, batching, axis-loading; full robustness suite at v0.6 §7.10). Run completed 2026-05-02.</p>
+<div class="nav">
+  <a href="index.html">← Back to overview</a>
+  <a href="deck.html">Pitch deck</a>
+  <a href="https://github.com/karma-canada/tribunal">GitHub</a>
+</div>
+</header>
+
+<div class="controls">
+<label for="axis-select">Axis:</label>
+<select id="axis-select">
+  <option value="hypocrisy">hypocrisy</option>
+  <option value="honor">honor</option>
+  <option value="opportunism">opportunism</option>
+  <option value="integrity">integrity</option>
+</select>
+<div class="legend">
+  <span>1 (low)</span>
+  <span class="legend-bar"></span>
+  <span>10 (high)</span>
+</div>
+</div>
+
+<table class="heatmap" id="heatmap-table"></table>
+
+<div class="summary" id="summary"></div>
+
+<div class="variance-table">
+<h3>Inter-model variance per (figure, axis), all 4 axes — sorted by range</h3>
+<p style="font-size: 0.92em; color: var(--muted);">Highest range = scholarship most genuinely contested across the council. Lowest range = canonization effect (scholarly consensus reproduced).</p>
+<table id="variance-table"></table>
+</div>
+
+<footer>
+<p>Tribunal · Phase A v0.6 run · 95.0% effective success · $47.31 inference cost · 44-figure roster · methodology robustness suite · CC BY 4.0</p>
+</footer>
+
+<script>
+async function loadData() {
+  const res = await fetch('data/phase-a.json');
+  return await res.json();
+}
+
+function colorForScore(score) {
+  if (score === null || score === undefined) return '#fafafa';
+  // Map 1-10 to red-yellow-green
+  const t = (score - 1) / 9;
+  // Three-stop gradient: red -> yellow -> green
+  let r, g, b;
+  if (t < 0.5) {
+    const u = t * 2;
+    r = 255;
+    g = Math.round(82 + u * (235 - 82));
+    b = Math.round(82 + u * (59 - 82));
+  } else {
+    const u = (t - 0.5) * 2;
+    r = Math.round(255 + u * (76 - 255));
+    g = Math.round(235 + u * (175 - 235));
+    b = Math.round(59 + u * (80 - 59));
+  }
+  return `rgb(${r},${g},${b})`;
+}
+
+function fmtFigure(f) {
+  return f.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function fmtModel(m) {
+  return m.split('/').slice(-1)[0];
+}
+
+function renderHeatmap(data, axis) {
+  const t = document.getElementById('heatmap-table');
+  let html = '<thead><tr><th class="row-label">Model ↓ / Figure →</th>';
+  for (const fig of data.figures) {
+    html += `<th>${fmtFigure(fig)}</th>`;
+  }
+  html += '</tr></thead><tbody>';
+  for (const model of data.models) {
+    html += `<tr><th class="row-label">${fmtModel(model)}</th>`;
+    for (const fig of data.figures) {
+      const score = data.matrix[model][fig][axis];
+      const bg = colorForScore(score);
+      const cls = score === null ? 'score empty' : 'score';
+      const label = score === null ? '—' : score.toFixed(1);
+      html += `<td class="${cls}" style="background:${bg}" title="${fmtFigure(fig)} / ${axis} : ${label}">${label}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</tbody>';
+  t.innerHTML = html;
+}
+
+function renderSummary(data, axis) {
+  const variance = data.variance;
+  // Sort figures by range descending for this axis
+  const items = data.figures.map(f => ({
+    figure: f, ...variance[f][axis]
+  })).sort((a, b) => b.range - a.range);
+  const top = items[0], bot = items[items.length - 1];
+  const html = `
+    <p><strong>${fmtFigure(top.figure)} / ${axis}</strong> shows the largest cross-model disagreement on this axis: range ${top.range.toFixed(1)}, stdev ${top.stdev.toFixed(2)}, mean ${top.mean.toFixed(2)} (n=${top.n}).</p>
+    <p><strong>${fmtFigure(bot.figure)} / ${axis}</strong> shows the tightest cross-model consensus: range ${bot.range.toFixed(1)}, stdev ${bot.stdev.toFixed(2)}, mean ${bot.mean.toFixed(2)} (n=${bot.n}).</p>
+    <p style="color: var(--muted); font-size: 0.92em;">Cells with range ≥4.0 indicate genuinely contested scholarship; cells with range ≤1.0 indicate the canonization effect.</p>
+  `;
+  document.getElementById('summary').innerHTML = html;
+}
+
+function renderVarianceTable(data) {
+  const rows = [];
+  for (const fig of data.figures) {
+    for (const axis of data.axes) {
+      const v = data.variance[fig][axis];
+      if (v) rows.push({ figure: fig, axis, ...v });
+    }
+  }
+  rows.sort((a, b) => b.range - a.range);
+  const t = document.getElementById('variance-table');
+  let html = '<thead><tr><th>Figure</th><th>Axis</th><th>Mean</th><th>Stdev</th><th>Range</th><th></th></tr></thead><tbody>';
+  const maxRange = Math.max(...rows.map(r => r.range));
+  for (const r of rows) {
+    const pct = (r.range / maxRange) * 100;
+    html += `<tr>
+      <td>${fmtFigure(r.figure)}</td>
+      <td>${r.axis}</td>
+      <td style="font-family: ui-monospace, monospace;">${r.mean.toFixed(2)}</td>
+      <td style="font-family: ui-monospace, monospace;">${r.stdev.toFixed(2)}</td>
+      <td style="font-family: ui-monospace, monospace;">${r.range.toFixed(1)}</td>
+      <td class="range-bar-cell" style="width: 200px;"><div class="range-bar" style="width: ${pct}%"></div></td>
+    </tr>`;
+  }
+  html += '</tbody>';
+  t.innerHTML = html;
+}
+
+(async () => {
+  const data = await loadData();
+  const sel = document.getElementById('axis-select');
+  function render() {
+    renderHeatmap(data, sel.value);
+    renderSummary(data, sel.value);
+  }
+  sel.addEventListener('change', render);
+  render();
+  renderVarianceTable(data);
+})();
+</script>
+
+</body>
+</html>

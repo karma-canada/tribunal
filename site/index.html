@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tribunal — Methodology for Measuring Frontier LLM Bias</title>
+<meta name="description" content="A benchmark methodology for evaluating LLM judges in domains without verifiable ground truth, with empirical findings on inter-model variance, narrative capture, and prompt-induced identity substitution.">
+<style>
+:root {
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #0a3d62;
+  --accent-bg: #eaf0f6;
+  --warn: #b71c1c;
+  --bg: #fff;
+  --rule: #e0e0e0;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Iowan Old Style", serif;
+  max-width: 760px;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  color: var(--text);
+  line-height: 1.55;
+  background: var(--bg);
+}
+header {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+h1 { font-size: 1.8em; margin: 0 0 0.3em 0; line-height: 1.2; }
+h2 { font-size: 1.3em; margin-top: 2.2em; padding-bottom: 0.3em; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.05em; margin-top: 1.5em; color: var(--muted); }
+.byline { color: var(--muted); font-style: italic; margin: 0; }
+.tagline { font-size: 1.1em; color: var(--muted); margin-top: 0.6em; }
+.nav { margin: 1em 0; padding: 0; list-style: none; display: flex; gap: 1.5em; flex-wrap: wrap; font-family: -apple-system, sans-serif; font-size: 0.95em; }
+.nav a { color: var(--accent); text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+.kicker { background: var(--accent-bg); border-left: 4px solid var(--accent); padding: 1em 1.2em; margin: 1.5em 0; }
+.kicker p { margin: 0.4em 0; }
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; margin: 1.5em 0; }
+.finding { background: var(--accent-bg); padding: 1em; border-radius: 4px; }
+.finding strong { display: block; color: var(--accent); margin-bottom: 0.3em; }
+.finding span { font-size: 0.92em; color: var(--muted); }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.92em; }
+th, td { border: 1px solid var(--rule); padding: 0.4em 0.7em; text-align: left; }
+th { background: #f4f4f4; }
+.warn { background: #fff5f5; border-left: 4px solid var(--warn); padding: 0.8em 1.2em; margin: 1em 0; }
+code { background: #f4f4f4; padding: 1px 4px; border-radius: 2px; font-family: ui-monospace, monospace; font-size: 0.9em; }
+footer { margin-top: 4em; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 0.85em; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Tribunal</h1>
+<p class="byline">A methodology for measuring frontier-LLM bias on contested figures, with a Mirror Test architecture for auditing AI accountability.</p>
+<p class="tagline">Working paper — Andrew Martin · independent researcher · Edmonton, AB · 2026-05-02</p>
+<ul class="nav">
+  <li><a href="deck.html">Pitch deck</a></li>
+  <li><a href="heatmap.html">Variance heatmap</a></li>
+  <li><a href="paper.html">Working paper (v0.6)</a></li>
+  <li><a href="https://doi.org/10.5281/zenodo.19853158" target="_blank" rel="noopener">Zenodo (v0.1)</a></li>
+  <li><a href="https://github.com/karma-canada/tribunal" target="_blank" rel="noopener">GitHub</a></li>
+</ul>
+</header>
+
+<div class="kicker">
+<p><strong>Tribunal is a benchmark methodology, not a leaderboard.</strong> It uses cross-provider LLM panels — 11 frontier models from 6 jurisdictions — to score historical figures on contested character axes (hypocrisy, honor, opportunism, integrity), and reports the inter-model <em>variance pattern</em> as the primary signal. Tight cross-model agreement is a fingerprint of epistemic settledness in training corpora; cross-model disagreement is a fingerprint of genuinely contested scholarship. The methodology is designed to surface narrative capture: where do frontier models converge in ways that reveal training-corpus biases, and where do they disagree honestly?</p>
+</div>
+
+<h2>Headline findings (Phase A v0.6, 3872 cells)</h2>
+
+<div class="findings">
+<div class="finding">
+<strong>Mandela/honor: the highest mean in the dataset</strong>
+<span>Mandela/honor at range 1.0, mean 9.09 across 11 frontier models from 6 jurisdictions — the tightest positive-pole canonization observed and the highest mean of any cell in the entire 3872-cell dataset. Stalin/honor at range 1.0, mean 1.14 is the matched negative-pole canonization. The methodology produces clean canonization signals at the extremes of contemporary historical judgment.</span>
+</div>
+<div class="finding">
+<strong>The reformist-autocrat cluster (the v0.6 generalization of Bismarck pattern)</strong>
+<span>Top-15 most-contested cells at v0.6 are dominated by autocrats with reformist or institution-building pretensions: Augustus, Louis XIV, Catherine the Great, Frederick the Great, Bismarck, Lee Kuan Yew, Selassie, Ben-Gurion, Nehru, de Gaulle. The methodology surfaces "the institutional outcome redeems the autocratic means" vs. "the autocratic means corrupted the institution" as a recognizable category of council disagreement, with predictable per-model splits.</span>
+</div>
+<div class="finding">
+<strong>Evidence-density prediction NOT supported</strong>
+<span>Pre-registered: thin-evidence figures (Augustus, Caesar, Marcus Aurelius, Saladin) would show variance ≥ 1.0 wider than dense-evidence figures. Actual: median range 3.00 thin / 3.00 medium / 2.50 dense. Δ = +0.50, well below threshold. Saladin at 1.0/8.55 honor matches Mandela at 1.0/9.09. The methodology measures something deeper than source-density-driven scholarship-spread.</span>
+</div>
+<div class="finding">
+<strong>Methodology robustness suite</strong>
+<span>Four pre-registered probes against contamination classes — within-cell sampling stability (panel median stdev 0.32), per-cell isolation under batching (validates v0.5 single-figure-per-call protocol), framing-context dependence (variance heatmap survives game-scaffold, per-cell scores partly framing-sensitive), axis-scale endpoint loading (canonization survives, contestation contracts ~50% under neutral axes). Bottom line: canonization findings robust; contestation findings axis-loading-conditioned.</span>
+</div>
+<div class="finding">
+<strong>Refusal asymmetry: minimax-m2.7</strong>
+<span>Across 352 calls per model at v0.6 scale, only minimax-m2.7 produced refusals (33/352, 9.4%). Refusals concentrate on figures with strong political resonance (Mao, Mussolini, Pinochet, Franco, Mugabe), often with explicit "ideological framework" framing. Other 10 models: 0% refusal. The provider-specific moderation pattern is the most replicable cross-version finding.</span>
+</div>
+<div class="finding">
+<strong>Council prompt-induction</strong>
+<span>Under Anthropic-stylistic priming, 5 of 6 supposed-non-Anthropic frontier models self-identified as Anthropic with detailed Anthropic-specific knowledge. Sanitization dropped the rate to 0/9. Methodology hazard for any council-of-models design.</span>
+</div>
+</div>
+
+<h2>What this is</h2>
+
+<p>Frontier LLMs are widely used both as <em>judges</em> of other models (LLM-as-judge in MT-Bench, AlpacaEval, AlpacaFarm, G-Eval, and most production preference-data pipelines) and as <em>substantive raters</em> of contested public claims. Both uses are downstream of the same unanswered question: <strong>how reliable are LLMs as evaluators in domains without verifiable ground truth?</strong> Existing work has documented LLM-as-judge biases — position, length, style, self-preference — almost exclusively in domains with answer keys. The questions for which scalable oversight matters most are not those domains.</p>
+
+<p>Tribunal is a benchmark methodology with two complementary tracks plus an extension architecture:</p>
+
+<ul>
+<li><strong>Track A — political bias comparator.</strong> An LLM-vs-LLM scoring matrix in which <em>N</em> frontier models independently score <em>M</em> public figures on <em>K</em> character axes, with the inter-model variance and refusal patterns as the primary signal.</li>
+<li><strong>Track B — adversarial debate-and-judge meta-eval.</strong> LLM-vs-LLM debate over the same scoring claims, adjudicated by a rotating multi-model judge panel with adversarial probes and a human-jury subsample.</li>
+<li><strong>Mirror Test architecture.</strong> The methodology applied to its sharpest empirical case: scoring the public professional records of contemporary AI executives. Specified in v0.6 §5.7–§5.10 with same-provider full inclusion (every council model scores every figure including its own provider's CEO) and an Adversarial PR Agent rotated per provider. Empirical results held privately pending red-team and counsel review; the v0.6 methodology paper documents the architecture publicly.</li>
+</ul>
+
+<h2>Phase 1 empirical run (Phase A — historical)</h2>
+
+<p>v0.6 reports a <strong>3872-cell</strong> Phase A run completed 2026-05-02: 11 frontier models × 44 historical figures × 4 character axes × 2 reps. Time-span 1st c BCE → late 20th c CE; eight jurisdictional cohorts (Africa, Middle East, non-China Asia, Latin America, 20th-c Europe, earlier Europe, classical antiquity, North America). Total expansion-run cost $47.31; v0.6 round total $80.51 including the four-probe robustness suite ($33.20). 95.0% effective success rate. <strong>Methodology robustness validated</strong> via stability, framing, batching, and axis-loading probes. Detailed variance heatmap and per-cell results: <a href="heatmap.html">interactive variance heatmap</a>.</p>
+
+<h3>Council composition</h3>
+<table>
+<tr><th>Model</th><th>Provider</th><th>Country</th></tr>
+<tr><td>Claude Opus 4.7</td><td>Anthropic</td><td>US</td></tr>
+<tr><td>GPT-5.5</td><td>OpenAI</td><td>US</td></tr>
+<tr><td>Gemini 3.1 Pro Preview</td><td>Google</td><td>US</td></tr>
+<tr><td>Grok 4.20</td><td>xAI</td><td>US</td></tr>
+<tr><td>Llama 4 Maverick</td><td>Meta</td><td>US</td></tr>
+<tr><td>DeepSeek V4-pro</td><td>DeepSeek</td><td>CN</td></tr>
+<tr><td>GLM 5.1</td><td>Zhipu / Z.ai</td><td>CN</td></tr>
+<tr><td>Kimi K2.6</td><td>Moonshot AI</td><td>CN</td></tr>
+<tr><td>MiniMax M2.7</td><td>MiniMax</td><td>CN</td></tr>
+<tr><td>Qwen 3.6 Max Preview</td><td>Alibaba</td><td>CN</td></tr>
+<tr><td>Mistral Large 2512</td><td>Mistral</td><td>FR</td></tr>
+</table>
+
+<h3>The Mirror Test (Phase B — contemporary AI executives)</h3>
+<div class="warn">
+<p><strong>Mirror Test results are held privately.</strong> Phase B applies the methodology to 12 contemporary AI executives (Altman, Amodei, Hassabis, Wang, Musk, Liang Wenfeng, Yang Zhilin, Yan Junjie, Zhang Peng, Robin Li, Pony Ma, Mensch, Zhou Jingren). The empirical artifact lives in a private working draft and is not published until red-team review, counsel review, and accumulation of temporal-drift signal across model-version releases. v0.6 specifies the architecture publicly; the application is held.</p>
+</div>
+
+<h2>Roadmap</h2>
+
+<ul>
+<li><strong>v0.7 — native-language extension + counterfactual reasoning axes.</strong> Re-run Phase A with native-language prompts (Mao in Mandarin; Stalin in Russian; Saladin in Arabic; Augustus in Latin/Italian academic); test whether canonization-effect cells move materially under language-locale shift. Plus: ends-justifies-means counterfactual axes that pair (means-severity, ends-achievement) for the reformist-autocrat cluster identified at v0.6.</li>
+<li><strong>Public tool (Phase 2).</strong> A web tool where any user can submit a figure name + axis selection + council subset and run the analysis with their own OpenRouter key (BYO-key) or shared rate-limited key. Curated gallery of methodologically-interesting submissions. Andrew Martin's role as methodology author and gallery curator, never publisher of individual scores.</li>
+<li><strong>Temporal drift.</strong> Re-run the same figures + axes against the same panel as new model versions release. Track per-(figure, axis, model) score shifts across versions as the secondary measurement. Predicted: 4–8 model releases per year given current frontier-lab cadence; cumulative cost ~$50/year.</li>
+<li><strong>Track B — debate &amp; judge meta-eval.</strong> Adversarial debate format with multi-model judge panels and human-jury subsample for the highest-variance cells. Phase 2 priority.</li>
+</ul>
+
+<h2>References</h2>
+
+<ul>
+<li>Working paper v0.6 — <code>repo/papers/20260502-tribunal-position-paper-v0.6.md</code> (canonical; v0.5 superseded, archived)</li>
+<li>Phase A run data — <code>repo/runs/20260430T181455Z/</code></li>
+<li>Council methodology iteration record — <code>working/memos/council-feedback-20260430-clean/</code></li>
+<li>Public chat.deepseek.com finding — <code>working/scripts/probes/captures/</code></li>
+<li>Zenodo working paper v0.1 — <a href="https://doi.org/10.5281/zenodo.19853158">10.5281/zenodo.19853158</a></li>
+</ul>
+
+<footer>
+<p>Tribunal · Andrew Martin · 2026-05-02 · Methodology held under CC BY 4.0 · <a href="https://github.com/karma-canada/tribunal">github.com/karma-canada/tribunal</a></p>
+</footer>
+
+</body>
+</html>

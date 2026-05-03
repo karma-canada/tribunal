@@ -1,0 +1,138 @@
+{
+  "run_id": "20260430T210435Z",
+  "run_version": "0.3",
+  "prompt_version": "v1",
+  "models": [
+    {
+      "id": "anthropic/claude-opus-4.7",
+      "family": "anthropic",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 5.0,
+        "output": 25.0
+      }
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "family": "openai",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 5.0,
+        "output": 30.0
+      }
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview",
+      "family": "google",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 2.0,
+        "output": 12.0
+      }
+    },
+    {
+      "id": "x-ai/grok-4.20",
+      "family": "xai",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 2.0,
+        "output": 6.0
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "family": "deepseek",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 0.43,
+        "output": 0.87
+      }
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "family": "zhipu",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 1.05,
+        "output": 3.5
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "family": "moonshot",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 0.74,
+        "output": 4.66
+      }
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "family": "minimax",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 0.3,
+        "output": 1.2
+      }
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "family": "mistral",
+      "country": "FR",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 0.5,
+        "output": 1.5
+      }
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "family": "meta",
+      "country": "US",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 0.15,
+        "output": 0.6
+      }
+    },
+    {
+      "id": "qwen/qwen3.6-max-preview",
+      "family": "qwen",
+      "country": "CN",
+      "tier": "flagship",
+      "pricing_per_mtok": {
+        "input": 1.04,
+        "output": 6.24
+      }
+    }
+  ],
+  "figures": [
+    "cromwell",
+    "robespierre",
+    "lincoln",
+    "lbj",
+    "bismarck",
+    "thatcher",
+    "catherine_the_great",
+    "mao_zedong"
+  ],
+  "axes": [
+    "hypocrisy",
+    "honor",
+    "opportunism",
+    "integrity"
+  ],
+  "reps": 2,
+  "temperature": 0.2,
+  "web_search": false,
+  "figures_json": "/Users/wondermonkey/Dropbox/Projects/tribunal/repo/evals/bias-comparator/figures.json",
+  "started_at": "2026-04-30T21:04:35.600143+00:00"
+}

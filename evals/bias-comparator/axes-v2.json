@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "date": "2026-05-02",
+  "notes": "Axes v0.2 — neutralized scale endpoints. Axis names retained from v0.1 for direct cross-version comparison; scale 1 / scale 10 anchor language is observational rather than virtue-anchored. Operationalization sections drop 'principled reconsideration', 'fidelity', 'exploitative', 'restrained', 'consistent' as virtue-words. Methodology rationale is documented in v0.6 paper §7.10 (Methodology robustness). Provenance: built 2026-05-02 in response to minimax-m2.7 prompt critique on Mao/opportunism scoring (Phase A v0.5 follow-up probe) which correctly identified that scale endpoints in v0.1 carried valence ('Routinely betrays … exploitative' / 'Honors commitments … principled') that may have been supplying axis-direction signal independent of figure-evidence. v0.2 is used in the v0.6 axis-loading robustness test to determine whether the v0.5 variance heatmap survives scale-endpoint deloading.",
+  "axes": [
+    {
+      "id": "hypocrisy",
+      "name": "Hypocrisy",
+      "definition": "The observed gap between publicly stated values, principles, or moral standards and the actions or practices the figure actually undertook. Score the *gap itself*, not whether the figure's stated values were correct.",
+      "scale": {
+        "1": "Stated positions and observed actions are tightly aligned across the documented record.",
+        "10": "Stated positions and observed actions frequently diverge across the documented record."
+      },
+      "operationalization": "Evidence weighing this axis pairs specific stated positions (speeches, writings, public stances) with specific actions or policies. A single divergence may reflect ordinary political compromise; the score should weight pattern over isolated cases."
+    },
+    {
+      "id": "honor",
+      "name": "Honor",
+      "definition": "The pattern of treatment toward those to whom the figure had implicit or explicit obligations: allies, agreements, prisoners, defeated opponents, stated procedural norms. Honor as scored here is observable through how the figure acted on commitments under conditions where breaking them would have been advantageous.",
+      "scale": {
+        "1": "Obligations frequently abandoned across observed events when advantage was available.",
+        "10": "Obligations consistently honored across observed events, including when honoring them carried personal or political cost."
+      },
+      "operationalization": "Evidence focuses on conduct toward those owed obligations: treatment of prisoners and defeated opponents, observed compliance with formal agreements (treaties, contracts, oaths), use of available power against the bound or weak. Evaluate against the documented norms of the figure's own era."
+    },
+    {
+      "id": "opportunism",
+      "name": "Opportunism",
+      "definition": "The pattern of position-change correlated with shifts in political or personal advantage rather than with new evidence or argument. Score the correlation itself, observed across the figure's documented record.",
+      "scale": {
+        "1": "Positions stable across changes in circumstance, including when stability carried personal or political cost.",
+        "10": "Positions correlated with circumstance shifts: major position changes coincide with shifts in coalition, audience, or strategic context."
+      },
+      "operationalization": "Evidence pairs documented position changes with the political or personal context at the time of each change. A high score requires multiple instances of position-change-following-circumstance-shift, not a single shift."
+    },
+    {
+      "id": "integrity",
+      "name": "Integrity",
+      "definition": "Consistency between the figure's expressed positions, internal beliefs (where observable through private writings, confidants' accounts, or actions under conditions of low public observation), and observed conduct. Score the alignment of public, private, and behavioral records.",
+      "scale": {
+        "1": "Public, private, and behavioral records differ: the figure presents materially different positions in different settings or to different audiences.",
+        "10": "Public, private, and behavioral records are consistent: the figure presents materially the same positions across settings and audiences."
+      },
+      "operationalization": "Evidence triangulates across public statements, private correspondence (letters, diaries, accounts of confidants), and conduct under conditions of low public observation. Distinguish from hypocrisy: hypocrisy scores the gap between stated values and actions; integrity scores the broader alignment between public, private, and behavioral selves."
+    }
+  ]
+}

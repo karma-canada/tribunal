@@ -1,5 +1,5 @@
 ---
-status: working paper (v0.3 — §7 reframed; methodology-critique addendum added)
+status: working paper (v0.3 — §7 reframed; methodology-critique addendum added); superseded by v0.6 (2026-05-02)
 date: 2026-04-29
 version: 0.3
 working_title: "Tribunal: Two Complementary Methods for Measuring Frontier LLM Bias on Contested Figures, with Judge Meta-Evaluation in No-Ground-Truth Domains"

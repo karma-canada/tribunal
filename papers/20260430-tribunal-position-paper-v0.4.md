@@ -1,5 +1,5 @@
 ---
-status: working paper (v0.4 — Mirror Test architecture, expanded historical empirical, day-2 findings)
+status: working paper (v0.4 — Mirror Test architecture, expanded historical empirical, day-2 findings); superseded by v0.6 (2026-05-02)
 date: 2026-04-30
 version: 0.4
 working_title: "Tribunal: Methodology for Measuring Frontier LLM Bias on Contested Figures, with Mirror Test Architecture for Auditing AI Accountability"

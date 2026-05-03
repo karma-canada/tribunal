@@ -84,7 +84,7 @@ The v0.5 contamination disclosure is more important than the variance-pattern fi
 - Date: 2026-04-30
 - Length target: ~6000w
 - Target venues: Zenodo (new version under concept DOI 10.5281/zenodo.19853158), GitHub canonical, LessWrong/AF distribution, intended journal submission to Open Journal of AI Ethics and Society or similar AI-ethics open-access venue, arXiv at Phase 2, NeurIPS/ICLR/FAccT workshop tracks
-- Pseudonymous authorship maintained (Andrew Martin)
+- Author: Andrew Martin (independent, Edmonton AB)
 
 ## v0.3 — 2026-04-29
 
@@ -129,7 +129,7 @@ Position paper skeleton introducing the two-track methodology:
 - Partial-ground-truth anchor via factual sub-claim verification
 - Per-figure difficulty score
 - Adversarial red-team workstream
-- Sovereign Canadian-biographical jurisdictional posture
+- Sovereign Canadian jurisdictional posture
 
 Author: Andrew Martin (independent researcher, Edmonton, AB, Canada).
 

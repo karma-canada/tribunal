@@ -1,5 +1,5 @@
 ---
-status: working paper (v0.5 — neutral-context re-run with expanded roster; v0.4 superseded)
+status: working paper (v0.5 — neutral-context re-run with expanded roster; v0.4 superseded); superseded by v0.6 (2026-05-02)
 date: 2026-05-01
 version: 0.5
 working_title: "Tribunal: Methodology for Measuring Frontier LLM Bias on Contested Figures, with Mirror Test Architecture for Auditing AI Accountability"

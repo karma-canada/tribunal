@@ -1,5 +1,5 @@
 ---
-status: skeleton (working paper)
+status: skeleton (working paper); superseded by v0.6 (2026-05-02)
 date: 2026-04-28
 version: 0.1
 working_title: "Tribunal: Two Complementary Methods for Measuring Frontier LLM Bias on Contested Figures, with Judge Meta-Evaluation in No-Ground-Truth Domains"

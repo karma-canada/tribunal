@@ -22,7 +22,7 @@ Every claim made in a debate or scoring run must cite to a source. Sources are v
 
 ### Author posture
 
-Independent Canadian-biographical author. Affiliated to a Canadian institution before formal release where possible. Cross-affiliation review panel for Phase 3 contemporary roster.
+Independent author, Edmonton AB. Affiliated to a Canadian institution before formal release where possible. Cross-affiliation review panel for Phase 3 contemporary roster.
 
 ## Pre-Phase-1 audit checklist
 
@@ -111,7 +111,7 @@ The project pre-empts plausible adversaries:
 - **A figure on the roster (or their representatives).** Mitigated by: defamation framing, evidence corpus discipline, counsel review before publication, sitting-head-of-state exclusion.
 - **A partisan critic claiming asymmetric methodology.** Mitigated by: pre-registered curation criteria, balanced pairings, cross-affiliation review panel for Phase 3, public methodology, refusal asymmetry analysis published openly.
 - **A SLAPP suit.** Mitigated by: Canadian jurisdiction (anti-SLAPP statutes in Ontario, BC, Quebec), academic-research framing, evidence-corpus discipline, multi-jurisdictional artifact mirrors so a single-jurisdiction injunction does not remove the work.
-- **Doxxing or harassment of contributors.** Mitigated by: real-name author posture is voluntary; reviewers and contributors may operate pseudonymously; project does not require personal information from community PR contributors beyond what is necessary to verify they are not affiliated with a figure on the roster.
+- **Doxxing or harassment of contributors.** Mitigated by: reviewers and community PR contributors may operate under pseudonyms; project does not require personal information from contributors beyond what is necessary to verify they are not affiliated with a figure on the roster.
 
 ## Counsel engagement plan
 

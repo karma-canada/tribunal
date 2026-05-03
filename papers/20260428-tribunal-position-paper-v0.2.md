@@ -1,5 +1,5 @@
 ---
-status: working paper (v0.2 — Phase 1 Track A prototype results folded in)
+status: working paper (v0.2 — Phase 1 Track A prototype results folded in); superseded by v0.6 (2026-05-02)
 date: 2026-04-28
 version: 0.2
 supersedes: 10.5281/zenodo.19852629  # v0.1 published as a separate Zenodo record

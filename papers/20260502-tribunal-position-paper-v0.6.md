@@ -492,11 +492,13 @@ The held-private Phase B Mirror Test re-run was the original empirical confirmat
 
 ## 9. Artifact roadmap and release cadence
 
-- **Phase 0** (now): position paper skeleton, governance and identity documents, prototype spec for both tracks.
-- **Phase 1** (1–4 weeks): Track A bias comparator MVP on ~10–15 mixed-roster figures × 4 axes × 5 models; small Track B debate proof-of-concept on 2–3 highest-variance cells; HF dataset v0.1 (unlisted).
-- **Phase 2** (1–3 months): Track A scaled to 30–50 figures × 8 axes × 8 frontier models; full Track B adversarial probes and human-jury subsample; arXiv preprint (this paper, with empirical results); custom leaderboard site live; formal HF release.
-- **Phase 3** (3–6 months): contemporary-figure roster expansion with full COI protocols; coordinated press cycle; conference workshop submission.
-- **Ongoing**: quarterly version bumps; community-PR governance; recurring frontier-model report card.
+**Phase A — Track A bias comparator (shipped, this version).** 44 figures × 4 axes × 11 frontier models × 2 reps = 3872 cells, run at temperature 0.2 under single-figure-per-call prompting. Robustness suite covers four contamination classes (data-file priming, axis-scale endpoint loading, framing-context, batching position-effects); all four leave the headline canonization findings intact. Per-figure evidence-density tagging (thin / medium / dense) is metadata only, not prompt-injected. Run config, score JSONL, summary, matrix, and per-cell variance heatmap published alongside this paper.
+
+**Phase B — Mirror Test architecture (specified, results held private).** §5.7–§5.10 define the cross-provider self-evaluation methodology for contemporary AI executives. v0.2 empirical results exist internally, with a sanitized contemporary-figure corpus and the substitution-rate audit reduced from 5/6 (primed) to 0/9 (scrubbed). Public release is gated on (a) external red-team review, (b) counsel of record review for defamation surface, and (c) accumulation of temporal-drift signal across multiple frontier-model release cycles. Default disposition is private retention.
+
+**Track B — Debate + judge meta-evaluation.** Specified architecturally in §4. Empirical implementation (debate transcript corpus, paired-judge meta-evaluation, partial-ground-truth anchoring via factual sub-claims) is deferred behind external funding. The contribution at this version is specification, not results.
+
+**Ongoing.** Version bumps as methodology iterates or roster expands; community-PR governance per `GOVERNANCE.md`; recurring frontier-model report card pegged to roster + axes versioning. Multi-language extension (Mandarin, Russian, Arabic, Latin/Italian academic), web-search-augmented variant, counterfactual-axis paired probes, and Phase 3 living-figure roster are deferred to subsequent versions and external funding.
 
 ## 10. References (sketch)
 
@@ -511,6 +513,3 @@ The held-private Phase B Mirror Test re-run was the original empirical confirmat
 - Krippendorff, K. (2004). *Content analysis: An introduction to its methodology.*
 - Additional references on LLM-as-judge bias surveys, debate-as-oversight follow-ups, and AI political-bias measurement to be filled during Phase 1 literature review.
 
----
-
-*This skeleton is the north-star document. It anchors scope, methodology, and posture across both tracks. The full draft is produced after Phase 1 prototype results. Expected upgrade points: §7 becomes empirical; §3.2 and §4.3 gain specific result tables; §8 gains comparison to contemporary judge-eval and political-bias literature published before submission.*
